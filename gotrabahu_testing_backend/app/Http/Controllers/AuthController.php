@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Requests\RegisterRequest;
+use App\Http\Requests\SignupRequest;
 use Laravel\Sanctum\PersonalAccessToken;
 
 
@@ -31,7 +31,7 @@ class AuthController extends Controller
 
     }
 
-    public function register(RegisterRequest $request)
+    public function signup(SignupRequest $request)
     {
         $data = $request->validated();
 

@@ -5,7 +5,7 @@ import axiosClient from "../axiosClient";
 import { useStateContext } from "../contexts/contextprovider";
 import { useNavigate } from 'react-router-dom';
 
-export default function register(){
+export default function signup(){
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -35,7 +35,7 @@ export default function register(){
             password: password,
         };
 
-          axiosClient.post("/register",payload).then(({data})=>{
+          axiosClient.post("/singup",payload).then(({data})=>{
           setUser(data.user);
           setToken(data.token);
         }).catch(err => {

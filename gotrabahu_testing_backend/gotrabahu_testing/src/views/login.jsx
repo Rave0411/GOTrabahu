@@ -62,7 +62,7 @@ export default function login(){
               <button className="signin-button_2" onClick={() => window.location.href = '/register'}>Sign in</button>
             </div>
             <div className="signin-text_2">
-                  <p> Don't have an account? click{' '} <Link to="/register" className="signin-text2_2"> Sign in </Link>{' '} to create.
+                  <p> Don't have an account? click{' '} <Link to="/signup" className="signin-text2_2"> Sign in </Link>{' '} to create.
                     </p>
             </div>
             <div>
