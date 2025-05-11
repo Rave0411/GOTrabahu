@@ -7,6 +7,7 @@ import userIcon from './images/profilepicture.png';
 import line from './images/line.png';
 import arrowLeft from './images/arrow-left.png';
 import arrowRight from './images/arrow-right.png';
+import createIcon from './images/create-icon.png';
 
 
 
@@ -74,36 +75,32 @@ export default function Posting() {
       {/* Posting Section */}
         <p className="employer-text">Employeer</p>
         <div className="post-scroll">
-          {posts.length > 0 ? (
-            posts.map((post) => (
-              <div
-                key={post.id}
-                className="posting-rectangular"
-                onClick={() => handlePostClick(post)}
-              >
+              <div className="posting-rectangular">    
                 <div className="poster-info">
                   <img src={userIcon} alt="User Icon" className="poster-img" />
                   <img src={line} className="poster-info-line" alt="highlighten" />
-                  <span className="poster-name">{post.posterName || 'Unknown Poster'}</span>
+                  <span className="poster-name"> 'Unknown Poster'</span>
                 </div>
                 <div className="post-description">
-                  <h2 className="post-title">{post.title || 'Untitled Post'}</h2>
-                  <p className="post-text">{post.summary || 'No summary available.'}</p>
-                  <button className="post-arrow-box" onClick={toggleDetails}>
+                  <h2 className="post-title"> 'Untitled Post'</h2>
+                  <p className="post-text"> No summary available.</p>
+                  <button className="post-arrow-box">
                     <img src={arrowRight} alt="Arrow" className="post-arrow-right" />
                   </button>
                 </div>
-                {showDetails && selectedPost?.id === post.id && (
                   <div className="post-all-details">
-                    <p>{selectedPost.description || 'No details available.'}</p>
+                    <p className="post-all-details-text">No details available.</p>
                   </div>
-                )}
-              </div>
-            ))
-          ) : (
+                  </div>
+          </div> 
             <div className ="available-posts">No posts available.</div>
-          )}
-        </div>
+
+          <div className = "create-post-container">
+            <div className="create-post">
+              <img src={createIcon} alt="User Icon" className="create-post-img" />
+              <span className="create-post-text">Make a Post</span>
+          </div>
+          </div>
     </div>
   );
-}
+ }

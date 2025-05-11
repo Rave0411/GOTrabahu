@@ -296,19 +296,28 @@ width: 143px;
   border-radius: 6px;
 }
 
-/* Adjusted the available-posts class to make it a single scrollable container on the right side */
 .available-posts {
-  width: 316px;
-  height: 100%; /* Full height of the viewport */
-  background-color: rgb(206, 206, 206);
+  width: 599px;
+  height: 100%;
+  background-color: rgb(206 206 206 / 0%);
   opacity: 1;
-  position: fixed; /* Fixed position to stay on the right side */
-  top: 0;
-  right: 0; /* Align to the right side */
-  overflow-y: auto; /* Enable vertical scrolling */
-  border: none; /* Removed border */
+  position: fixed;
+  top: 63px;
+  left: 220px;
+  overflow-y: auto;
+  border: none;
   padding: 10px;
-  border-radius: 0; /* Removed border radius */
+  border-radius: 0; 
+}
+
+.create-post-container {
+  width: 125px;
+  height: 1155px;
+  background-color: rgba(255, 255, 255, 0.627);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 
