@@ -85,11 +85,14 @@ export default function LandingPage() {
             looking for talent like you.
       </div>
       <div className="employee-button-landingpage">
-        <button className="employee-button-background" href="Signupemployee"></button>
-      </div>
-      <div className="employee-button-register">Register Now</div>
-      <div className="employee-arrow-button">
-      <img src={arrowIcon} alt="Arrow Icon" className="arrow-icon" />
+        <button > 
+          < a className="employee-button-background" href="signupemployee">
+            <text className="employee-button-text">Register Now</text>
+            <div className="employee-arrow-button">
+            <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
+            </div>
+          </a>
+        </button>
       </div>
       <div className="employer-card"></div>
       <div className="employer-text">Be an Employer</div>
@@ -98,9 +101,17 @@ export default function LandingPage() {
       discover qualified employees ready to be hired 
       for your needs.
       </div>
-      <div className="employer-button-background"></div>
-      <div className="employer-button-register">Register Now</div>
-      <div className="employer-arrow-button"></div>
+      <div className="employer-buttons-landingpage">
+        <button>
+        <a className="employer-button-background" href="Signupemployer">
+          <text className="employer-button-text">Register Now</text>
+          <div className="employer-arrow-button">
+          <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
+          </div>
+        </a>
+          
+        </button>
+      </div>
       <div className="small-decorative"></div>
       <div className="work-text">HOW DOES IT WORK
         <div className="work-background1">

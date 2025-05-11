@@ -7,7 +7,7 @@
       font-family:  sans-serif;
     }
 
-    .top-rec-employee_6 {
+    .top-rec-employer {
       width: 115px;
       height: 40px;
       background: rgb(7, 114, 12);
@@ -18,7 +18,7 @@
       left: 40px;
     }
 
-    .text-employee_6 {
+    .text-employer {
       width: 100%;
       height: 20px;
       font-size: 18px;
@@ -30,7 +30,7 @@
       font-family: sans-serif;
     }
     
-    .top-shape-login_6 {
+    .top-shape-login {
       width: 1920px;
       height: 60px;
       background: rgb(255, 255, 255);
@@ -41,7 +41,7 @@
       left: 0px;
     }
     
-    .logo-signup_6 {
+    .logo-signup {
       width: 290px;
       height: 40px;
       margin-top: 5px;
@@ -50,7 +50,7 @@
       top: 8px
     }
 
-    .Gologo-login_6 {
+    .Gologo-login {
         width: 100%;
         height: 120px;
         position: absolute;
@@ -59,7 +59,7 @@
         left: 0px;
       }
     }
-    .header-white-rec_6 {
+    .header-white-rec{
       width: 100%;
       height: 60px;
       background: rgba(255, 255, 255, 0.8);
@@ -69,14 +69,14 @@
       left: 0px;
     }
     
-    .header-logo-login_6 {
+    .header-logo-login {
       width: 349px;
       height: 42.32px;
       margin-top: 11px;
       position: absolute;
       left: 1091px;
     }
-    .header-arrow-login_6 {
+    .header-arrow-login {
       transition: 0.3s;
       width: 39px;
       height: 30px;
@@ -87,7 +87,7 @@
     }
     
 
-    .grey-fade-signup_6 {
+    .grey-fade-signup {
       width: 600px;
       height: 897px;
       background: rgba(0, 0, 0, 0.5);
@@ -97,7 +97,7 @@
       left: -8px;
     }
     
-    .body-logo-login_6 {
+    .body-logo-login {
       width: 173px;
       height: 118px;
       margin-top: 11px;
@@ -106,11 +106,11 @@
       top: 96px;
     }
     
-    .container-login_6 {
+    .container-login {
       position: absolute;
     }
   
-    .background-signup_6 {
+    .background-signup {
       width: 1920px;
       height: 896px;
       position: absolute;
@@ -122,7 +122,7 @@
       overflow: hidden;
     }
     
-    .body-text_6 {
+    .body-text-login {
       width: 680px;
       height: 89px;
       margin-top: 257px;
@@ -135,7 +135,7 @@
       top: -3px;
     }
     
-    .back-button-signup_6 {
+    .back-button-signup {
       transition: 0.3s;
       width: 20px;
       background-color: #ffffff;
@@ -151,7 +151,7 @@
     }
     
     
-    .login-form_6 {
+    .login-form {
       width: 155px;
       height: 134px;
       background: rgb(255, 255, 255);
@@ -162,7 +162,7 @@
       left: 229px;
     }
 
-    .top-text-email_6 {
+    .top-text-email {
         width: 349px;
         height: 20px;
         font-size: 15px;
@@ -173,7 +173,7 @@
         font-family: sans-serif;
     }
     
-    .top-text-password_6 {
+    .top-text-password {
       width: 349px;
       height: 20px;
       font-size: 15px;
@@ -184,7 +184,7 @@
       font-family: sans-serif;
     }
 
-    .email-input-login_6 {
+    .email-input-login {
       width: 358px;
       height: 39px;
       border-radius: 5px;
@@ -195,7 +195,7 @@
       border: 1px solid #e5e7eb; 
     }
     
-    .email-icon-login_6 {
+    .email-icon-login {
       width: 40px;
       height: 43px;
       position: absolute;
@@ -204,7 +204,7 @@
     }
     
     
-    .password-input-login_6 {
+    .password-input-login {
       position: absolute;
       width: 358px;
       height: 37px;
@@ -216,7 +216,7 @@
       padding: 10px 20px;
     }
     
-    .password-icon-login_6 {
+    .password-icon-login {
       width: 50px;
       height: 42px;
       position: absolute;
@@ -224,7 +224,7 @@
       top: 370px;
     }
 
-    .confirm-password-input_6 {
+    .confirm-password-input {
         position: absolute;
       width: 358px;
       height: 37px;
@@ -237,7 +237,7 @@
     }
     
 
-    .Password-length_6 {
+    .Password-length {
       width: 275px;
       height: 22px;
       position: absolute;
@@ -267,12 +267,12 @@
       justify-content: center;
     }
     
-    .eye-off_6 {
+    .eye-off {
       width: 30px;
       height: 30px;
     }
     
-    .eye-icon-employee_6 {
+    .eye-icon-employer {
       width: 30px;
       height: 25px;
       position: absolute;
@@ -289,7 +289,7 @@
       cursor: pointer;
     }
     
-    .login-bar-signup_6 {
+    .login-bar-signup {
       width: 100px;
       height: 35px;
       font-size: 24px;
@@ -305,7 +305,7 @@
       border-radius: 9px;
     }
 
-    .login-button-text_6 {
+    .login-button-text{
       width: 100%;
       height: 100%;
       color: #000000;
@@ -323,31 +323,30 @@
       transform: translateY(4px);
     }
     
-    .Create-button_6 {
-      width: 150px;
+    .signin-bar-signup {
+      width: 100px;
       height: 35px;
+      font-size: 24px;
       text-align: center;
       cursor: pointer;
+      outline: none;
       color: rgb(0, 0, 0);
       position: absolute;
-      left: 390px;
-      top: 505px;
-      background-color: #96b753;
+      left: 396px;
+      top: 540px;
+      background-color: #ffffff;
       border: none;
       border-radius: 9px;
     }
     
-    .Create-account-text{
+    .signin-button-text{
       width: 100%;
-      height: 15px;
-      color: #050505;
+      height: 100%;
+      color: #000;
       font-family: sans-serif;
       font-weight: bold;
       font-size: 16px;
       text-align: center;
-      position-area: center;
-      position: absolute;
-      top: 0px;
     }
     
     .signin-button:hover {background-color: #b8b8b8}
@@ -357,7 +356,7 @@
       transform: translateY(4px);
     }
     
-    .signin-text_6 {
+    .signin-text {
       width: 305px;
       height: 65px;
       font-size: 13px;
@@ -368,6 +367,6 @@
       font-family: sans-serif;
     
     }
-     .signin-text2_6 {
+     .signin-text2 {
     text-decoration: underline;
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import "./signupemployee.css";
+import "./signupemployer.css";
 import logo from "./images/header logo.jpg";
 import arrow from "./images/Arrow.png";
 import bodylogo from "./images/Gologo.png";
@@ -43,6 +43,9 @@ function App() {
           <img src={Background} alt="body background" className="background-signup" /> 
         </div>
         <div class="grey-fade-signup"></div>
+        <div className="top-rec-employer">
+          <text className="text-employer">Employer</text>
+        </div>
          <div class="login-form" > 
           <img src={bodylogo} alt="body Logo" className="Gologo-login" /> 
         </div> 
@@ -60,7 +63,7 @@ function App() {
               <img src={passwordIcon} alt="password" className="password-icon-login"/>
              <input id="hs-toggle-password" type="password" className="password-input-login" placeholder="Password"/> 
               <button type="button" className="password-show-hide" id="toggle-password-btn"> 
-              <img src={off} className="eye-icon-login" alt="eye-off">
+              <img src={off} className="eye-icon-employer" alt="eye-off">
                 </img>
               </button>
 

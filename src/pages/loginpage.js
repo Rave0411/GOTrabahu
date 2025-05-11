@@ -54,7 +54,7 @@ function App() {
               <img src={passwordIcon} alt="password" className="password-icon-login"/>
              <input id="hs-toggle-password" type="password" className="password-input-login" placeholder="Password"/> 
               <button type="button" className="password-show-hide" id="toggle-password-btn"> 
-              <img src={off} className="eye-icon-login" alt="eye-off">
+              <img src={off} className="eye-icon-loginpage" alt="eye-off-2">
                 </img>
               </button>
 
