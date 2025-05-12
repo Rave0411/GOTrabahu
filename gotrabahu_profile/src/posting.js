@@ -79,7 +79,7 @@ export default function Posting() {
                 <div className="poster-info">
                   <img src={userIcon} alt="User Icon" className="poster-img" />
                   <img src={line} className="poster-info-line" alt="highlighten" />
-                  <span className="poster-name"> 'Unknown Poster'</span>
+                  <span className="poster-name"> Poster Name</span>
                 </div>
                 <div className="post-description">
                   <h2 className="post-title"> 'Untitled Post'</h2>

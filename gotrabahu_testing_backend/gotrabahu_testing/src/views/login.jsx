@@ -2,11 +2,27 @@ import axios from "axios";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import axiosClient from "../axiosClient";
-import { useStateContext } from "../contexts/contextprovider";
+import { useStateContext } from "../contexts/contextprovider.jsx";
+import { useState } from "react";
+import logo from "../assets/images/header logo.jpg";
+import Background from "../assets/images/background.png";
+import bodylogo from "../assets/images/Gologo.png";
+import email from "../assets/images/email picture.png";
+import passwordIcon from "../assets/images/password picture.png";
+import off from "../assets/images/eye-off.png";
+
+
 
 
 
 export default function login(){
+
+    const [text, setText] = useState("");
+    const handleChange = (event) => {
+        setText(event.target.value);
+    }
+    const eyeicon = document.getElementById('eyeicon');
+    const password = document.getElementById('password');
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -33,41 +49,58 @@ export default function login(){
     return (
         <div>
       {/* Header Section */}
-      <section className="header-section_2">
-        <div className="header-container_2">
+      <section className="header-section-login">
+        <div className="top-shape-login"></div>
+        <button>
+          <Link className="back-button-login" to='/'></Link>
+        </button>
+        <div className="header-container-login">
+          <img src={logo} alt="header Logo" className="rec-logo-login" />
         </div>
       </section>
 
       {/* Body Section */}
-      <section className="body-section_2">
-         <p className="body-text_2"> Every great journey starts with a single login. </p>
-        <div className="body-container_2">
-        <div className="body-rectangular_2" />
+      <section className="container-login">
+         <p className="body-text-login"> Every great journey starts with a single login. </p>
+        <div className="body-background">
+          <img src={Background} alt="body background" className="background-login" />
         </div>
-        <div style={{ padding: '20px' }}>
+        <div className="grey-fade-login"></div>
+         <div className="login-form" >
+          <img src={bodylogo} alt="body Logo" className="Gologo-login" />
+        </div>
+        <form className="login-form-input" onSubmit={Submit}>
+          <div className = "email-box">
+            <input ref = {emailRef} type="email" placeholder="Email" className="email-input-login"/>
           </div>
-         <div className="login-form_2" > </div>
-          <form onSubmit={Submit}>
-            <div className = "email-box_2">
-              <input ref={emailRef} type="email" placeholder="Email" className="email-input_2"/>
-            </div>
+          <div>
+            <img src={email} alt="email" className="email-icon-login"/>
+          </div>
+          <div>
+              <img src={passwordIcon} alt="password" className="password-icon-login"/>
+             <input ref={passwordRef} id="hs-toggle-password" type="password" className="password-input-login" placeholder="Password"/>
+              <button type="button" className="password-show-hide" id="toggle-password-btn">
+              <img src={off} className="eye-icon-login" alt="eye-off-2">
+                </img>
+              </button>
+          </div>
+          <div>
+            <button type = "submit" className="login-button-bar">Log in</button>
+          </div>
+            </form>
             <div>
-               <input ref={passwordRef} type="password" className="password-input_2" placeholder="Password"/>
+            <button className="signin-button-bar" onClick={() => window.location.href = '/signup'}>
+                Sign in
+            </button>
             </div>
-            <div>
-              <button type="submit" className="login-button_2">Log in</button>
-            </div>
-          </form>
-            <div>
-              <button className="signin-button_2" onClick={() => window.location.href = '/register'}>Sign in</button>
-            </div>
-            <div className="signin-text_2">
-                  <p> Don't have an account? click{' '} <Link to="/signup" className="signin-text2_2"> Sign in </Link>{' '} to create.
-                    </p>
+            <div className="signin-text">
+                  <p>
+                    Don't have an account? click <span> <button> <a className="signup-text-portal" href="signupemployee">Sign in</a> </button> </span> to create.
+                  </p>
             </div>
             <div>
               <button >
-              <a className="forgot-password_2" href="default.asp" target="_blank">Forgot password</a>
+              <a className="forgot-password" href="forgotpass">Forgot password</a>
               </button>
             </div>
       </section>
