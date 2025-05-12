@@ -1129,24 +1129,27 @@
     .login-button-bar {
       width: 100px;
       height: 45px;
-      font-size: 16px;
-      text-align: center;
-      cursor: pointer;
-      outline: none;
+      background: #76A42E;
       position: absolute;
-      left: 397px;
       top: 472px;
-      background-color: #4aad5a;
-      border: none;
+      left: 397px;
       border-radius: 9px;
+      overflow: hidden;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      text-align: center;
+      color: white;
+      border: 1px solid #76A42E;
+      padding: 9px 25px;
+
     }
 
-    .login-button-bar:hover {background-color: #3e8e41}
-
-    .login-button-bar:active {
-      background-color: #3e8e41;
-      box-shadow: 0 5px #666;
-      transform: translateY(4px);
+    .login-button-bar:hover {
+        background-color: white;
+        color: #76A42E;
     }
 
     .signin-button-bar {
@@ -1165,14 +1168,14 @@
       transition-duration: 0.4s;
       text-align: center;
       color: black;
-      border: 2px solid #76A42E;
-      padding: 9px 32px;
+      border: 1px solid #ffffff;
+      padding: 9px 23px;
 
     }
 
-    .signup-button-bar:hover {
-        background-color: white;
-        color: #76A42E;
+    .signin-button-bar:hover {
+        background-color: #76A42E;
+        color: white;
     }
 
     .signin-button-text{
