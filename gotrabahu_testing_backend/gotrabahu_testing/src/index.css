@@ -347,8 +347,6 @@
       opacity: 1;
     }
 
-
-
     .description-text {
       width: 800px;
       color: rgba(255,255,255);
@@ -1143,9 +1141,9 @@
       border-radius: 9px;
     }
 
-    .login-button:hover {background-color: #3e8e41}
+    .login-button-bar:hover {background-color: #3e8e41}
 
-    .login-button:active {
+    .login-button-bar:active {
       background-color: #3e8e41;
       box-shadow: 0 5px #666;
       transform: translateY(4px);
@@ -1154,17 +1152,27 @@
     .signin-button-bar {
       width: 100px;
       height: 42px;
-      font-size: 16px;
-      text-align: center;
-      cursor: pointer;
-      outline: none;
-      color: rgb(0, 0, 0);
+      background: white;
       position: absolute;
-      left: 396px;
       top: 536px;
-      background-color: #ffffff;
-      border: none;
+      left: 396px;
       border-radius: 9px;
+      overflow: hidden;
+      font-size: 16px;
+      cursor: pointer;
+      display: inline-block;
+      text-decoration: none;
+      transition-duration: 0.4s;
+      text-align: center;
+      color: black;
+      border: 2px solid #76A42E;
+      padding: 9px 32px;
+
+    }
+
+    .signup-button-bar:hover {
+        background-color: white;
+        color: #76A42E;
     }
 
     .signin-button-text{
@@ -1175,13 +1183,6 @@
       font-weight: bold;
       font-size: 16px;
       text-align: center;
-    }
-
-    .signin-button:hover {background-color: #b8b8b8}
-
-    .signin-button:active {
-      background-color: #747c74;
-      transform: translateY(4px);
     }
 
     .signin-text {
@@ -1406,7 +1407,6 @@
       top: 277px;
     }
 
-
     .password-input-login_6 {
       position: absolute;
       width: 358px;
@@ -1438,7 +1438,6 @@
       left: 139px;
       padding: 10px 20px;
     }
-
 
     .Password-length_6 {
       width: 275px;

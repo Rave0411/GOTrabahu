@@ -69,7 +69,8 @@ export default function login(){
          <div className="login-form" >
           <img src={bodylogo} alt="body Logo" className="Gologo-login" />
         </div>
-        <form className="login-form-input" onSubmit={Submit}>
+        <div className="login-form-input">
+        <form  onSubmit={Submit}>
           <div className = "email-box">
             <input ref = {emailRef} type="email" placeholder="Email" className="email-input-login"/>
           </div>
@@ -85,9 +86,10 @@ export default function login(){
               </button>
           </div>
           <div>
-            <button type = "submit" className="login-button-bar">Log in</button>
+            <button type ="submit" className="login-button-bar">Log in</button>
           </div>
             </form>
+            </div>
             <div>
             <button className="signin-button-bar" onClick={() => window.location.href = '/signup'}>
                 Sign in
