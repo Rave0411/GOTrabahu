@@ -23,66 +23,67 @@ function App() {
   return (
     <div>
       {/* Header Section */}
-      <section className="header-section-login">
-        <div className="top-shape-login"></div>
-        <div className="header-container-login">
-          <img src={logo} alt="header Logo" className="logo-signup" />
+      <section className="header-section-login_6">
+        <div className="top-shape-login_6"></div>
+        <div className="header-container-login_6">
+          <img src={logo} alt="header Logo" className="logo-signup_6" />
           
-          <img src={arrow} alt = "header-arrow"/>
+          <img src={arrow} alt = "header-arrow_6"/>
           
         </div>
         <button>
-          <a className="back-button-signup" href="login"/>
+          <a className="back-button-signup_6" href="login"/>
         </button>
       </section>
 
       {/* Body Section */}
-      <section className="container-login">
-         <p className="body-text"> Every great journey starts with a single login. </p>
-        <div className="body-background">
-          <img src={Background} alt="body background" className="background-signup" /> 
+      <section className="container-login_6">
+         <p className="body-text_6"> Every great journey starts with a single login. </p>
+        <div className="body-background_6">
+          <img src={Background} alt="body background" className="background-signup_6" /> 
         </div>
-        <div class="grey-fade-signup"></div>
-         <div class="login-form" > 
-          <img src={bodylogo} alt="body Logo" className="Gologo-login" /> 
+        <div class="grey-fade-signup_6"></div>
+        <div className="top-rec-employee_6">
+          <text className="text-employee_6">Employee</text>
+        </div>
+         <div class="login-form_6" > 
+          <img src={bodylogo} alt="body Logo" className="Gologo-login_6" /> 
         </div> 
-          <div class = "email-box">
-            <text className="top-text-email">Enter Email</text>
-            <text className="top-text-password">Create Password</text>
-            <input type="email" placeholder="Email" className="email-input-login"/>
+          <div class = "email-box_6">
+            <text className="top-text-email_6">Enter Email</text>
+            <text className="top-text-password_6">Create Password</text>
+            <input type="email" placeholder="Email" className="email-input-login_6"/>
           </div>
           <div> 
-            <img src={email} alt="email" className="email-icon-login"/>
+            <img src={email} alt="email" className="email-icon-login_6"/>
           </div> 
           <div>
 
 
-              <img src={passwordIcon} alt="password" className="password-icon-login"/>
-             <input id="hs-toggle-password" type="password" className="password-input-login" placeholder="Password"/> 
-              <button type="button" className="password-show-hide" id="toggle-password-btn"> 
-              <img src={off} className="eye-icon-login" alt="eye-off">
+              <img src={passwordIcon} alt="password" className="password-icon-login_6"/>
+             <input id="hs-toggle-password" type="password" className="password-input-login_6" placeholder="Password"/> 
+              <button type="button" className="password-show-hide_6" id="toggle-password-btn"> 
+              <img src={off} className="eye-icon-employee_6" alt="eye-off">
+
                 </img>
               </button>
 
           </div>
-          <input type="password" className="confirm-password-input" id="confirmpassword" placeholder="Confirm Password"/>
-          <div>
-            <button className="login-bar-signup">
-              <text className="login-button-text">Log in</text>  
-            </button> 
-          </div> 
+          <input type="password" className="confirm-password-input_6" id="confirmpassword" placeholder="Confirm Password"/>
             <div>
-            <button className="signin-bar-signup">
-             <text className="signin-button-text">Sign in</text>
+            <button>
+             <a className="Create-button_6" href="employee_profile">
+              <text className="Create-account-text">Create Account</text>
+             </a>
             </button>
             </div>
-            <div className="signin-text"> 
+            <div className="signin-text_6"> 
                   <p>
                     Already have an account? click <span> <button> <a className="login-text-portal" href="login">Log in</a> </button> </span> to proceed.
                   </p>
             </div>
             <div>
-              <div className="Password-length">* Password must contain atleast 8 Characters</div>
+              <div className="Password-length_6">* Password must contain atleast 8 Characters</div>
             </div>
       </section>
     </div>

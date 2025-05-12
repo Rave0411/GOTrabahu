@@ -19,15 +19,16 @@
     overflow: hidden;
   }
   
-  .header-logo {
-    width: 349px;
-    height: 42.32px;
-    margin-top: 11px;
+  .header-logo-forgotpass1 {
+    width: 290px;
+    height: 40px;
+    margin-top: 5px;
     position: absolute;
-    left: 1091px;
+    right: 30px;
+    top: 8px
   }
   
-  .header-arrow {
+  .forgotpass-back-arrow {
     transition: 0.3s;
     width: 39px;
     height: 30px;
@@ -65,8 +66,8 @@
     background-repeat: no-repeat;
     background-position: fixed;
     background-size: cover;
-    top: 35px;
-    left: -8px;
+    top: 59px;
+    left: 0px;
     overflow: hidden;
   }
   
@@ -85,22 +86,24 @@
   
   .grey-box-rectangular1 {
     width: 635px;
-    height: 517px;
+    height: 438px;
     margin-top: 59px;
     background: rgb(0, 0, 0, 0.5);
     opacity: 1;
     position: absolute;
     top: 0px;
+    left: 0px
   }
   
   .grey-box-rectangular2 {
     width: 635px;
-    height: 456px;
+    height: 460px;
     margin-top: 59px;
     background: rgb(0, 0, 0, 0.5);
     opacity: 1;
     position: absolute;
-    top: 520px;
+    top: 440px;
+    left: 0px;
   }
   
   .login-form {
@@ -246,16 +249,16 @@
   }
   
   .resend-code-button {
-    width: 127px;
-    height: 55px;
-    font-size: 18px;
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: #000000;
     position: absolute;
-    left: 269px;
-    top: 446px;
+    left: 290px;
+    top: 440px;
     background-color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -270,16 +273,16 @@
   }
   
   .verify-code-button {
-    width: 127px;
-    height: 55px;
-    font-size: 18px;
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: rgb(255 255 255);
     position: absolute;
     left: 420px;
-    top: 446px;
+    top: 440px;
     background-color: #96b753;
     border: none;
     border-radius: 5px;
@@ -293,16 +296,16 @@
   }
   
   .set-password-button {
-    width: 127px;
-    height: 55px;
-    font-size: 18px;
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
     text-align: center;
     cursor: pointer;
     outline: none;
     color: rgb(255 255 255);
     position: absolute;
     left: 420px;
-    top: 783px;
+    top: 785px;
     background-color: #96b753;
     border: none;
     border-radius: 5px;

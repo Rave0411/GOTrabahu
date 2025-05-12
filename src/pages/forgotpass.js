@@ -1,6 +1,6 @@
 import React from "react";
 import "./forgotpass.css";
-import logo from "./images/GOTrabahu.png";
+import Headerlogo from "./images/header logo.jpg";
 import arrow from "./images/Arrow.png";
 import bodylogo from "./images/Gologo.png";
 import email from "./images/email picture.png";
@@ -20,9 +20,9 @@ function App() {
       {/* Header Section */}
       <section className="header-section-forgotpass">
         <div className="header-containerforgotpass">
-          <img src={logo} alt="header Logo" className="header-logo" />
+          <img src={Headerlogo} alt="header Logo" className="header-logo-forgotpass1" />
           <button onClick={onClick} style={{ position: 'relative', top: '10px', left: '31px' }}>
-              <img src={arrow} alt = "header-arrow"/>
+              <img src={arrow} alt = "header-back-arrow" href="login"/>
           </button>
         </div>
       </section>
