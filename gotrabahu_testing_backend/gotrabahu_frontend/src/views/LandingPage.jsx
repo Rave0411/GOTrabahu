@@ -17,14 +17,25 @@ export default function LandingPage() {
     if(token){
         return <Navigate to='/'/>
     }
+
+        const scrollToCategories = () => {
+        const categoriesSection = document.getElementById("categories-section");
+        if (categoriesSection) {
+            categoriesSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
+
     return (
     <div id="landingpage">
     <div className="header">
       <div className="header-container-landing">
         <button>
         <Link className="login-button-landing" to="/login">Login</Link>
-        <Link className="signup-button-landing" to="/signupEmployee">Signup</Link>
         </button>
+        <div>
+            <button onClick={scrollToCategories} className="signup-button-landing">Sign Up</button>
+        </div>
         <div className="about-text-landing">About us</div>
         <div className="about-icon-landing">
           <img src={iIcon} alt="I-icon" className="about-icon" />
@@ -71,7 +82,7 @@ export default function LandingPage() {
       </div>
 
       {/* Categories Section */}
-      <div className="categories-background">
+      <div id="categories-section" className="categories-background">
       <div className="categories-greenfade-background">
         <img src={fadebackground} alt="Fade Background" className="fade-background" />
       </div>
@@ -102,12 +113,12 @@ export default function LandingPage() {
       </div>
       <div className="employer-buttons-landingpage">
         <button>
-        <a className="employer-button-background" href="Signupemployer">
+        <Link className="employer-button-background" to="Signupemployer">
           <text className="employer-button-text">Register Now</text>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
           </div>
-        </a>
+        </Link>
 
         </button>
       </div>

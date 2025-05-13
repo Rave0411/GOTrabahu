@@ -1,19 +1,15 @@
-import axios from "axios";
-import { useEffect } from "react";
-import { useContext } from "react";
-import { Navigate, Outlet } from "react-router-dom";
-import axiosClient from "../axiosClient";
-import { useStateContext } from "../contexts/contextprovider";
+import { Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useStateContext } from '../contexts/contextprovider';
+import React from 'react';
 
-
-export default function Dashboard(){
-    const {user, token, setUser, setToken} = useStateContext();
+export default function DefaultLayout(){
+ const {user, token, setUser, setToken} = useStateContext();
 
   if(!token){
        return <Navigate to='/login'/>
     }
-
-    const onLogout =  (ev) =>{
+           const onLogout =  (ev) =>{
         ev.preventDefault();
         axiosClient.get('/logout')
         .then(({}) => {
@@ -23,7 +19,7 @@ export default function Dashboard(){
     }
 
     return(
-        <div id="dashboard">
+        <div id="defaultlayout">
          <div className="content">
             <header>
                 <div>
