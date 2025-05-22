@@ -1,6 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
 import Login from './views/login.jsx';
-import SignupEmployee from './views/signupEmployee.jsx';
+import Signup from './views/signup.jsx';
 import SignupEmployer from './views/signupEmployer.jsx';
 import Dashboard from './views/Dashboard.jsx';
 import LandingPage from './views/LandingPage.jsx';
@@ -24,7 +24,7 @@ const router = createBrowserRouter ([
                 },
                 {
                     path: '/signupEmployee',
-                    element:  <SignupEmployee />,
+                    element:  <Signup />,
                 },
                     {
                     path: '/signupEmployer',

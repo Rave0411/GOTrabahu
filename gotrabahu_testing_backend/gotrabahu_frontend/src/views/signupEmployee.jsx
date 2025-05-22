@@ -48,7 +48,7 @@ export default function signupEmployee(){
             password: password,
         };
 
-          axiosClient.post("/signupEmployee",payload).then(({data})=>{
+          axiosClient.post("/employee/signup",payload).then(({data})=>{
           setUser(data.user);
           setToken(data.token);
         }).catch(err => {
@@ -69,7 +69,7 @@ export default function signupEmployee(){
           <img src={arrow} alt = "header-arrow_6"/>
         </div>
         <button>
-          <a className="back-button-signup_6" href="login"/>
+          <Link className="back-button-signup_6" to="/"/>
         </button>
       </section>
 

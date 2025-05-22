@@ -48,7 +48,7 @@ export default function signupEmployer(){
             password: password,
         };
 
-          axiosClient.post("/signupEmployer",payload).then(({data})=>{
+          axiosClient.post("/employers/signup",payload).then(({data})=>{
           setUser(data.user);
           setToken(data.token);
         }).catch(err => {

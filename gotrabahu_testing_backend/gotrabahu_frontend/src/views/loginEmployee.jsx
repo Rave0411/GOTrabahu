@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import axiosClient from "../axiosClient";
+import axiosClient from "../axiosClient.js";
 import { useStateContext } from "../contexts/contextprovider.jsx";
 import { useState } from "react";
 import logo from "../assets/images/header logo.jpg";
@@ -35,7 +35,7 @@ export default function login(){
             email: emailRef.current.value,
             password: passwordRef.current.value,
         }
-        axiosClient.post("/login",payload).then(({data})=>{
+        axiosClient.post("/employees/login",payload).then(({data})=>{
             setUser(data.user);
             setToken(data.token);
     }).catch(err => {

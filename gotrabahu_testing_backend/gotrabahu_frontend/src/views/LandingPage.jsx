@@ -13,10 +13,6 @@ import { useStateContext } from "../contexts/contextprovider.jsx";
 
 
 export default function LandingPage() {
-    const {token} = useStateContext();
-    if(token){
-        return <Navigate to='/'/>
-    }
 
         const scrollToCategories = () => {
         const categoriesSection = document.getElementById("categories-section");
@@ -96,7 +92,7 @@ export default function LandingPage() {
       </div>
       <div className="employee-button-landingpage">
         <button >
-          <Link className="employee-button-background" to="/signupEmployee">
+          <Link className="employee-button-background" to="/signup">
             <text className="employee-button-text">Register Now</text>
             <div className="employee-arrow-button">
             <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
@@ -113,7 +109,7 @@ export default function LandingPage() {
       </div>
       <div className="employer-buttons-landingpage">
         <button>
-        <Link className="employer-button-background" to="Signupemployer">
+        <Link className="employer-button-background" to="/signupemployer">
           <text className="employer-button-text">Register Now</text>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
