@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\SignupEmployeeRequest;
-
+use App\Http\Requests\LoginEmployeeRequest;
 
 
 class EmployeeAuthController extends Controller
@@ -21,27 +21,27 @@ class EmployeeAuthController extends Controller
         $employee = Employee::create([
         'name' => $data['name'] ?? null,
         'email' => $data['email'],
-        'password' => bcrypt($data['password']),,
+        'password' => bcrypt($data['password']),
         ]);
 
         $token = $employee->createToken('main')->plainTextToken;
 
         return response()->json([
-            'user' => $employee,
+            'employee' => $employee,
             'token' => $token,
         ]);
     }
 
-    public function loginEmployee(Request $request)
+    public function loginEmployee(LoginEmployeeRequest $request)
     {
     $data = $request->validated();
 
-    if (!Auth::attempt($data)){
+    if (!Auth::guard('employee')->attempt($data)){
         return response([
             'message'=> 'email or password are wrong',
-        ]);
+        ],401);
 
-    $employee = Auth::employee();
+    $employee = Auth::guard('employee')->user();
     $token = $employee->createToken('main')->plainTextToken;
 
     return response()->json([

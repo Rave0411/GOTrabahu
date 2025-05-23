@@ -1,6 +1,6 @@
 import {createBrowserRouter} from 'react-router-dom';
-import Login from './views/login.jsx';
-import Signup from './views/signup.jsx';
+import Login from './views/loginEmployee.jsx';
+import Signup from './views/signupEmployee.jsx';
 import SignupEmployer from './views/signupEmployer.jsx';
 import Dashboard from './views/Dashboard.jsx';
 import LandingPage from './views/LandingPage.jsx';
@@ -19,7 +19,7 @@ const router = createBrowserRouter ([
                     element: <LandingPage/>,
                 },
                 {
-                    path: '/login',
+                    path: '/loginEmployee',
                     element: <Login />,
                 },
                 {

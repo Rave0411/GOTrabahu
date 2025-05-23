@@ -10,12 +10,10 @@ import bodylogo from "../assets/images/Gologo.png";
 import email from "../assets/images/email picture.png";
 import passwordIcon from "../assets/images/password picture.png";
 import off from "../assets/images/eye-off.png";
+import { useNavigate } from "react-router-dom";
 
 
-
-
-
-export default function login(){
+export default function loginEmployee(){
 
     const [text, setText] = useState("");
     const handleChange = (event) => {
@@ -28,6 +26,7 @@ export default function login(){
     const passwordRef = useRef();
 
     const {setUser, setToken} = useStateContext();
+    const navigate = useNavigate();
 
     const Submit =  (ev) =>{
         ev.preventDefault();
@@ -35,9 +34,10 @@ export default function login(){
             email: emailRef.current.value,
             password: passwordRef.current.value,
         }
-        axiosClient.post("/employees/login",payload).then(({data})=>{
+        axiosClient.post("/employees/loginEmployee",payload).then(({data})=>{
             setUser(data.user);
             setToken(data.token);
+            navigate('/dashboard');
     }).catch(err => {
         const response = err.response;
         if(response && response.status === 422){

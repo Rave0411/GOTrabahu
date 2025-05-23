@@ -16,7 +16,6 @@ return [
     'defaults' => [
         'guard' => env('AUTH_GUARD', 'web'),
         'passwords' => env('AUTH_PASSWORD_BROKER', 'employees'),
-        'passwords' => env('AUTH_PASSWORD_BROKER', 'employers')
 
     ],
 
@@ -43,13 +42,13 @@ return [
             'provider' => 'users',
         ],
 
-        'employees' => [
-            'driver' => 'session',
+        'employee' => [
+            'driver' => 'sanctum',
             'provider' => 'employees',
         ],
 
-        'employers' => [
-            'driver' => 'session',
+        'employer' => [
+            'driver' => 'sanctum',
             'provider' => 'employers',
         ],
     ],
@@ -113,8 +112,14 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
+        'employees' => [
+            'provider' => 'employees',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'employers' => [
+            'provider' => 'employers',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
             'expire' => 60,
             'throttle' => 60,

@@ -26,7 +26,7 @@ class EmployerAuthController extends Controller
         $token = $employer->createToken('employer_token')->plainTextToken;
 
         return response()->json([
-            'user' => $employer,
+            'employer' => $employer,
             'token' => $token,
         ]);
     }

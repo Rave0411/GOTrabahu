@@ -92,7 +92,7 @@ export default function LandingPage() {
       </div>
       <div className="employee-button-landingpage">
         <button >
-          <Link className="employee-button-background" to="/signup">
+          <Link className="employee-button-background" to="/signupEmployee">
             <text className="employee-button-text">Register Now</text>
             <div className="employee-arrow-button">
             <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
@@ -109,7 +109,7 @@ export default function LandingPage() {
       </div>
       <div className="employer-buttons-landingpage">
         <button>
-        <Link className="employer-button-background" to="/signupemployer">
+        <Link className="employer-button-background" to="/signupEmployer">
           <text className="employer-button-text">Register Now</text>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />

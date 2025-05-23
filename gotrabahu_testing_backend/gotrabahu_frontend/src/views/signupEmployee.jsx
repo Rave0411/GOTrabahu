@@ -48,9 +48,10 @@ export default function signupEmployee(){
             password: password,
         };
 
-          axiosClient.post("/employee/signup",payload).then(({data})=>{
-          setUser(data.user);
+          axiosClient.post("/employees/signupEmployee",payload).then(({data})=>{
+          setUser(data.employee);
           setToken(data.token);
+          navigate('/dashboard');
         }).catch(err => {
             const response = err.response;
             if(response && response.status === 422){
@@ -60,7 +61,7 @@ export default function signupEmployee(){
     }
 
     return(
-          <div>
+    <div>
       {/* Header Section */}
       <section className="header-section-login_6">
         <div className="top-shape-login_6"></div>
@@ -107,7 +108,7 @@ export default function signupEmployee(){
             </form>
             </div>
             <div className="login-text_6">
-            <p>Already have an account? click <span> <button> <a className="login-text-portal" href="login">Log in</a> </button> </span> to proceed.</p>
+            <p>Already have an account? click <span> <button> <Link className="login-text-portal" to="/loginEmployee">Log in</Link> </button> </span> to proceed.</p>
             </div>
               <div className="Password-length_6">Password must contain atleast 8 Characters</div>
         </section>

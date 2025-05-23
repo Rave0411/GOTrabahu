@@ -15,7 +15,7 @@ import off from "../assets/images/eye-off.png";
 
 
 
-export default function login(){
+export default function loginEmployer(){
 
     const [text, setText] = useState("");
     const handleChange = (event) => {
