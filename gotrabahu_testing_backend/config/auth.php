@@ -14,7 +14,7 @@ return [
     */
 
     'defaults' => [
-        'guard' => env('AUTH_GUARD', 'web'),
+        'guard' => env('AUTH_GUARD', 'employee'),
         'passwords' => env('AUTH_PASSWORD_BROKER', 'employees'),
 
     ],
@@ -43,12 +43,12 @@ return [
         ],
 
         'employee' => [
-            'driver' => 'sanctum',
+            'driver' => 'session',
             'provider' => 'employees',
         ],
 
         'employer' => [
-            'driver' => 'sanctum',
+            'driver' => 'session',
             'provider' => 'employers',
         ],
     ],
@@ -71,16 +71,10 @@ return [
     */
 
     'providers' => [
-        'users' => [
-        'driver' => 'eloquent',
-        'model' => App\Models\User::class,
-    ],
-
         'employees' => [
             'driver' => 'eloquent',
             'model' => App\Models\Employee::class,
     ],
-
         'employers' => [
             'driver' => 'eloquent',
             'model' => App\Models\Employer::class,
@@ -112,6 +106,7 @@ return [
     */
 
     'passwords' => [
+
         'employees' => [
             'provider' => 'employees',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),

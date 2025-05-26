@@ -34,21 +34,21 @@ class EmployeeAuthController extends Controller
 
     public function loginEmployee(LoginEmployeeRequest $request)
     {
-    $data = $request->validated();
+        $data = $request->validated();
 
-    if (!Auth::guard('employee')->attempt($data)){
-        return response([
-            'message'=> 'email or password are wrong',
-        ],401);
-
-    $employee = Auth::guard('employee')->user();
-    $token = $employee->createToken('main')->plainTextToken;
-
-    return response()->json([
-        'employee' => $employee,
-        'token'=> $token
-    ]);
+        if (!Auth::guard('employee')->attempt($data)) {
+            return response([
+                'message' => 'email or password are wrong',
+            ], 401);
         }
+
+        $employee = Auth::guard('employee')->user();
+        $token = $employee->createToken('main')->plainTextToken;
+
+        return response()->json([
+            'employee' => $employee,
+            'token' => $token
+        ]);
     }
 
     public function logout(Request $request)
