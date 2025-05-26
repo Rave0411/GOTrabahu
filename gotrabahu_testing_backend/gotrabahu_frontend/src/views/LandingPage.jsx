@@ -19,23 +19,25 @@ export default function LandingPage() {
         if (categoriesSection) {
             categoriesSection.scrollIntoView({ behavior: "smooth" });
         }
+         };
+        const scrollToAbout = () => {
+        const aboutSection = document.getElementById("about-background");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
     };
-
-
     return (
     <div id="landingpage">
     <div className="header">
       <div className="header-container-landing">
-        <button>
-        <Link className="login-button-landing" to="/login">Login</Link>
-        </button>
         <div>
+            <button onClick={scrollToCategories} className="login-button-landing">Log In</button>
             <button onClick={scrollToCategories} className="signup-button-landing">Sign Up</button>
         </div>
-        <div className="about-text-landing">About us</div>
+        <button onClick={scrollToAbout} className="about-text-landing">About us
         <div className="about-icon-landing">
           <img src={iIcon} alt="I-icon" className="about-icon" />
-        </div>
+        </div></button>
       </div>
 
       {/* Hero Section */}
@@ -93,7 +95,7 @@ export default function LandingPage() {
       <div className="employee-button-landingpage">
         <button >
           <Link className="employee-button-background" to="/signupEmployee">
-            <text className="employee-button-text">Register Now</text>
+            <text className="employee-button-text">Click</text>
             <div className="employee-arrow-button">
             <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
             </div>
@@ -110,12 +112,11 @@ export default function LandingPage() {
       <div className="employer-buttons-landingpage">
         <button>
         <Link className="employer-button-background" to="/signupEmployer">
-          <text className="employer-button-text">Register Now</text>
+          <text className="employer-button-text">Click</text>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
           </div>
         </Link>
-
         </button>
       </div>
       <div className="small-decorative"></div>
@@ -138,9 +139,6 @@ export default function LandingPage() {
         </div>
       </div>
     </div>
-
-
-
       {/* Footer Section */}
       <div className="footer-background">
         <div className="GoTrabahu-footer-text">GOTrabahu</div>

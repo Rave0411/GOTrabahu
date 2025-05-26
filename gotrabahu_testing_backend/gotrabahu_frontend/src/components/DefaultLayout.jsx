@@ -9,9 +9,9 @@ export default function DefaultLayout(){
   if(!token){
        return <Navigate to='/login'/>
     }
-           const onLogout =  (ev) =>{
+        const onLogout =  (ev) =>{
         ev.preventDefault();
-        axiosClient.get('/logoutEmployee')
+        axiosClient.get('/logout')
         .then(({}) => {
            setUser(null)
            setToken(null)
@@ -19,21 +19,48 @@ export default function DefaultLayout(){
     }
 
     return(
-        <div id="defaultlayout">
-         <div className="content">
-            <header>
-                <div>
-                    Header
+    <div className="app-layout">
+      <header>
+     {/* Header Section */}
+    <div className="header-container_8">
+        <div className="post-header_8">
+          <img src = {burger} alt="Burger Icon" className="burger-img_8" />
+          <img src={logo} alt="Logo" className="header-logo_8" />
+          <div className="search-bar_8">
+            <input type="text" placeholder="Search..." className="search-input_8" />
+            <button className="search-button_8">
+              <img src={searchIcon} alt="Search Icon" className="search-img_8" />
+            </button>
+          </div>
+          <div className="user-info_8">
+            <img src={userIcon} alt="User Icon" className="user-img_8" />
+          </div>
+       </div>
+      </div>
+      </header>
+      <aside>
+                {/* Side Bar Section */}
+                <div className="side-bar">
+                  <div className="side-bar-item0">
+                    <button className="side-bar-text0">Posting</button>
+                  </div>
+                  <div className="side-bar-item1">
+                    <button className="side-bar-text1">Payment System</button>
+                  </div>
+                  <div className="side-bar-item2">
+                    <button className="side-bar-text2">Subscription</button>
+                  </div>
+                  <div className="side-bar-item3">
+                    <button className="side-bar-text3">Profile</button>
+                  </div>
+                  <div className="side-bar-item4">
+                    <button href="#" onClick={onLogout} className="side-bar-text4">Log Out</button>
+                  </div>
                 </div>
-                <div>
-                    {user.name}
-                    <a href="#" onClick={onLogout} className="btn-logout"> Logout</a>
-                </div>
-            </header>
-            <main>
-            <Outlet />
-            </main>
-            </div>
-        </div>
+      </aside>
+      <main>
+        <Outlet />
+      </main>
+    </div>
     )
 }

@@ -1,5 +1,6 @@
 import {Outlet} from 'react-router-dom';
 import { useStateContext } from '../contexts/contextprovider';
+import { Navigate } from 'react-router-dom';
 
 
 export default function GuestLayout(){
@@ -10,7 +11,6 @@ export default function GuestLayout(){
     return(
         <div>
             <div>
-
             </div>
             <Outlet/>
         </div>

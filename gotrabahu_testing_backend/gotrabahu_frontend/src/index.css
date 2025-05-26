@@ -92,18 +92,24 @@
     }
 
 
-    .about-text-landing {
-      width: 71px;
-      color: rgba(0,0,0,0.75);
-      position: absolute;
-      top: 35px;
-      left: 55px;
-      font-family: sans-serif;
-      font-weight: lighter;
-      text-decoration: underline;
-      font-size: 16px;
-      opacity: 1;
-      text-align: left;
+    .about-button-landing {
+        width: 71px;
+        color: rgba(0,0,0,0.75);
+        position: absolute;
+        top: 35px;
+        left: 55px;
+        font-family: sans-serif;
+        font-weight: lighter;
+        text-decoration: underline;
+        font-size: 16px;
+        opacity: 1;
+        text-align: left;
+        border: none;
+        background: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
     }
 
     .about-icon {
@@ -1936,4 +1942,322 @@
      .signin-text2_6 {
     text-decoration: underline;
     }
+
 }
+    /* Dashboard Section */
+
+ @media (min-width: 600px) {
+
+ *{ box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family:  sans-serif;
+  background-color: rgb(255, 255, 255);
+
+
+}.posting-header-container_8 {
+  width: 1440px;
+  height: 1214px;
+  background: #76A42E;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.poster-header_8 {
+ width: 1440px;
+ height: 61px;
+ background-color: #76A42E;
+
+}
+
+.header-logo_8 {
+  width: 298px;
+  height: 36.14px;
+  position: absolute;
+  top: 11px;
+  left: 22px;
+}
+
+.search-input_8 {
+  width: 410px;
+  height: 31px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 14px;
+  left: 885px;
+  border-radius: 6px;
+}
+
+.search-button_8 {
+  width: 19px;
+  height: 20px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 20px;
+  left: 855px;
+  border-radius: 6px;
+}
+
+.search-img_8{
+  width: 40px;
+  height: 37px;
+  position: absolute;
+  top: 12px;
+  left: 836px;
+}
+
+.user-info_8{
+  width: 59px;
+  height: 54px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  top: 3px;
+  left: 1372px;
+}
+
+.user-info img_8 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 2px;
+  left: 4px;
+}
+
+.burger-img_8 {
+  width: 47px;
+  height: 30px;
+  position: absolute;
+  top: 14px;
+  left: 8px;
+}
+
+.body-container_8 {
+  width: 1920px;
+  height: 1157px;
+  background-repeat: no-repeat;
+  background-position: fixed;
+  background-color: rgb(255, 255, 255);
+  background-image: url("./images/background.png");
+  opacity: 1;
+  position: absolute;
+  top: 61px;
+  left: 0px;
+}
+
+/* Adjusted the side bar items to be arranged from top to bottom */
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 222px;
+  height: 1162px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.8;
+  position: absolute;
+  left: -4px;
+  top: 0px;
+  padding: 10px;
+  gap: -3px;
+}
+
+.side-bar-item0,
+.side-bar-item1,
+.side-bar-item2,
+.side-bar-item3,
+.side-bar-item4 {
+  width: 100%;
+  height: 44px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side-bar-text0,
+.side-bar-text1,
+.side-bar-text2,
+.side-bar-text3,
+.side-bar-text4 {
+  font-size: 16px;
+  font-family: sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.employer-text_8{
+width: 143px;
+    color: white;
+    background-color: #6C8A3C;
+    opacity: 1;
+    text-align: center;
+    font-size: 20px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 111px;
+    left: 259px;
+    border-radius: 6px;
+}
+
+.posting-rectangular_8{
+    width: 455px;
+    height: 229px;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
+    position: absolute;
+    top: 160px;
+    left: 261px;
+    border-radius: 0px 0px 0px 0px;
+    border: 1px solid rgb(0, 0, 0);
+}
+.poster-info_8{
+    width: 458px;
+    height: 238px;
+    background-color: #76a42e;
+    opacity: 1;
+    position: absolute;
+    top: -7px;
+    left: -2px;
+    border-radius: 6px;
+}
+.poster-img_8{
+  width: 59px;
+  height: 54px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  position: absolute;
+  top: 14px;
+  left: 18px;
+}
+
+.poster-info-line_8{
+  width: 326px;
+  height: 0px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  position: absolute;
+  top: 207px;
+  left: 366px;
+}
+
+.poster-name_8{
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  font-size: 19px;
+  font-family: sans-serif;
+  position: absolute;
+  top: 20px;
+  left: 93px;
+}
+
+.post-description_8{
+  width: 445px;
+  height: 138px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  position: absolute;
+  top: 82px;
+  left: 5px;
+}
+
+.post-info-line_8{
+  width: 455px;
+  height: 0px;
+  background-color: rgb(255, 255, 255);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.post-title_8{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+
+}
+
+.post-text_8{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+.post-arrow-box_8{
+  width: 47px;
+  height: 239px;
+  background-color: rgb(0 0 0 / 77%);
+  opacity: 1;
+  position: absolute;
+  top: -90px;
+  left: 450px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-arrow_8{
+  width: 24px;
+  height: 28px;
+  background-color: rgb(255 255 255 / 0%);
+  opacity: 1;
+  position: absolute;
+  top: 98px;
+  left: 8px;
+
+}
+.post-scroll_8 {
+  width: 690px;
+  height: 1134px;
+  background-color: rgb(206 206 206 / 0%);
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  left: 216px;
+  overflow-y: auto;
+  border: 0px solid rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+
+.post-all-details_8 {
+  width: 316px;
+  height: 1134px;
+  background-color: rgb(206 206 206);
+  opacity: 1;
+  position: absolute;
+  top: 8px;
+  left: 903px;
+  overflow-y: auto;
+  border: 0px solid rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+/* Adjusted the available-posts class to make it a single scrollable container on the right side */
+.available-posts_8 {
+  width: 316px;
+  height: 100%; /* Full height of the viewport */
+  background-color: rgb(206, 206, 206);
+  opacity: 1;
+  position: fixed; /* Fixed position to stay on the right side */
+  top: 0;
+  right: 0; /* Align to the right side */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: none; /* Removed border */
+  padding: 10px;
+  border-radius: 0; /* Removed border radius */
+}
+
+ }
