@@ -112,13 +112,22 @@
         align-items: center;
     }
 
+    .about-link-text {
+        text-decoration: underline;
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+    }
+
     .about-icon {
       width: 16px;
       height: 15px;
       opacity: 1;
       position: absolute;
-      top: 37px;
-      left: 122px;
+      top: 4px;
+      left: 67px;
     }
 
 

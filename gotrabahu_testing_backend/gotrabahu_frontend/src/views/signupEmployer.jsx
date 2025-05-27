@@ -48,7 +48,7 @@ export default function signupEmployer(){
             password: password,
         };
 
-          axiosClient.post("/employers/signup",payload).then(({data})=>{
+          axiosClient.post("/employers/signupEmployer",payload).then(({data})=>{
           setUser(data.user);
           setToken(data.token);
         }).catch(err => {
@@ -69,7 +69,7 @@ export default function signupEmployer(){
                     <img src={arrow} alt = "header-arrow_6"/>
                   </div>
                   <button>
-                    <a className="back-button-signup_6" href="login"/>
+                    <Link className="back-button-signup_6" to="/"/>
                   </button>
                 </section>
 
@@ -81,7 +81,7 @@ export default function signupEmployer(){
                   </div>
                   <div className="grey-fade-signup_6"></div>
                   <div className="top-rec-employee_6">
-                    <span className="text-employee_6">Employee</span>
+                    <span className="text-employee_6">Employer</span>
                   </div>
                    <div className="login-form_6" >
                     <img src={bodylogo} alt="body Logo" className="Gologo-login_6" />
@@ -107,7 +107,7 @@ export default function signupEmployer(){
                       </form>
                       </div>
                       <div className="login-text_6">
-                      <p>Already have an account? click <span> <button> <a className="login-text-portal" href="login">Log in</a> </button> </span> to proceed.</p>
+                      <p>Already have an account? click <span> <button> <a className="login-text-portal" href="loginEmployer">Log in</a> </button> </span> to proceed.</p>
                       </div>
                         <div className="Password-length_6">Password must contain atleast 8 Characters</div>
                   </section>

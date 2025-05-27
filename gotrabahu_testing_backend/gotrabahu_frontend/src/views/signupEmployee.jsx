@@ -48,11 +48,12 @@ export default function signupEmployee(){
             password: password,
         };
 
-          axiosClient.post("/signupEmployee",payload).then(({data})=>{
+          axiosClient.post("/employees/signupEmployee",payload).then(({data})=>{
           console.log('Signup response data', data);
           setUser(data.employee);
           setToken(data.token);
           navigate('/dashboard');
+
         }).catch(err => {
             const response = err.response;
             if(response && response.status === 422){

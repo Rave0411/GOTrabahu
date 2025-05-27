@@ -6,45 +6,45 @@ import userIcon from '../assets/images/profilepicture.png';
 import line from '../assets/images/line.png';
 import arrowLeft from '../assets/images/arrow-left.png';
 import arrowRight from '../assets/images/arrow-right.png';
-import {useNavigate} from 'react-router-dom';
+import axiosClient from '../axiosClient';
+import { useNavigate } from 'react-router-dom';
 
-
-
-export default function Posting() {
+export default function Dashboard() {
   const [showDetails, setShowDetails] = useState(false);
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
 
   useEffect(() => {
-    // Fetch posts from the database
-    fetch('/api/posts') // Replace with your API endpoint
-      .then((response) => response.json())
-      .then((data) => setPosts(data))
-      .catch((error) => console.error('Error fetching posts:', error));
+    axiosClient.getItem("/posts").then(({ data }) => {
+      setPosts(data.posts);
+    });
   }, []);
 
-  const toggleDetails = () => {
-    setShowDetails(!showDetails);
-  };
-
   const handlePostClick = (post) => {
-    setSelectedPost(post);
+    if (selectedPost && selectedPost.id === post.id && showDetails) {
+      setShowDetails(false);
+      setSelectedPost(null);
+    } else {
+      setSelectedPost(post);
+      setShowDetails(true);
+    }
   };
 
   return (
-  <div className="posting-header-container_8">
+    <div className="posting-header-container_8">
       {/* Body Section */}
-      <div className="body-container_8">
-      </div>
+      <div className="body-container_8"></div>
       {/* Posting Section */}
-        <p className="employer-text_8">Employeer</p>
-        <div className="post-scroll_8">
-          {posts.length > 0 ? (
-            posts.map((post) => (
-              <div
+      <p className="employer-text_8">Employer</p>
+      <div className="post-scroll_8">
+        {posts.length > 0 ? (
+          <ul>
+            {posts.map((post) => (
+              <li
                 key={post.id}
                 className="posting-rectangular_8"
                 onClick={() => handlePostClick(post)}
+                style={{ listStyle: 'none', marginBottom: '20px', cursor: 'pointer' }}
               >
                 <div className="poster-info_8">
                   <img src={userIcon} alt="User Icon" className="poster-img_8" />
@@ -54,7 +54,13 @@ export default function Posting() {
                 <div className="post-description_8">
                   <h2 className="post-title_8">{post.title || 'Untitled Post'}</h2>
                   <p className="post-text_8">{post.summary || 'No summary available.'}</p>
-                  <button className="post-arrow-box_8" onClick={toggleDetails}>
+                  <button
+                    className="post-arrow-box_8"
+                    onClick={e => {
+                      e.stopPropagation();
+                      handlePostClick(post);
+                    }}
+                  >
                     <img src={arrowRight} alt="Arrow" className="post-arrow-right_8" />
                   </button>
                 </div>
@@ -63,12 +69,13 @@ export default function Posting() {
                     <p>{selectedPost.description || 'No details available.'}</p>
                   </div>
                 )}
-              </div>
-            ))
-          ) : (
-            <div className ="available-posts_8">No posts available.</div>
-          )}
-        </div>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <div className="available-posts_8">No posts available.</div>
+        )}
+      </div>
     </div>
   );
 }

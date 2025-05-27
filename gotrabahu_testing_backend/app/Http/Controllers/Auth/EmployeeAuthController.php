@@ -24,7 +24,7 @@ class EmployeeAuthController extends Controller
         'password' => bcrypt($data['password']),
         ]);
 
-        $token = $employee->createToken('main')->plainTextToken;
+        $token = $employee->createToken('employee_token')->plainTextToken;
 
         return response()->json([
             'employee' => $employee,
@@ -51,7 +51,7 @@ class EmployeeAuthController extends Controller
         ]);
     }
 
-    public function logout(Request $request)
+    public function logoutEmployee(Request $request)
     {
         $employee = $request ->employee();
 

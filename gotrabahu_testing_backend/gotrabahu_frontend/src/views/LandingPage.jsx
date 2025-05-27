@@ -1,5 +1,5 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/Gologo.png";
 import iIcon from "../assets/images/abouticon.png";
@@ -10,18 +10,21 @@ import findIcon from "../assets/images/magnifyingIcon.png";
 import applyIcon from "../assets/images/checkIcon.png";
 import fadebackground from "../assets/images/greenfade.png";
 import { useStateContext } from "../contexts/contextprovider.jsx";
+import { useState } from "react";
 
 
 export default function LandingPage() {
 
-        const scrollToCategories = () => {
+    const [actionType, setActionType] = useState(null);
+    const navigate = useNavigate();
+    const scrollToCategories = () => {
         const categoriesSection = document.getElementById("categories-section");
         if (categoriesSection) {
             categoriesSection.scrollIntoView({ behavior: "smooth" });
         }
-         };
+    };
         const scrollToAbout = () => {
-        const aboutSection = document.getElementById("about-background");
+        const aboutSection = document.getElementById("about-section");
         if (aboutSection) {
             aboutSection.scrollIntoView({ behavior: "smooth" });
         }
@@ -31,13 +34,27 @@ export default function LandingPage() {
     <div className="header">
       <div className="header-container-landing">
         <div>
-            <button onClick={scrollToCategories} className="login-button-landing">Log In</button>
-            <button onClick={scrollToCategories} className="signup-button-landing">Sign Up</button>
+            <button onClick={
+                () => {
+                    setActionType("login");
+                    scrollToCategories();
+                }
+            } className="login-button-landing">Log In</button>
+            <button onClick={
+                () => {
+                    setActionType("signup");
+                    scrollToCategories();
+                }
+            } className="signup-button-landing">Sign Up</button>
         </div>
-        <button onClick={scrollToAbout} className="about-text-landing">About us
+        <div>
+        <button onClick={scrollToAbout} className="about-button-landing">
+        <span className="about-link-text">About us</span>
         <div className="about-icon-landing">
-          <img src={iIcon} alt="I-icon" className="about-icon" />
-        </div></button>
+            <img src={iIcon} alt="I-icon" className="about-icon" />
+        </div>
+        </button>
+        </div>
       </div>
 
       {/* Hero Section */}
@@ -53,7 +70,7 @@ export default function LandingPage() {
       <div className="apply-text">Apply</div>
 
       {/* About Section */}
-      <div className="about-background"></div>
+      <div id = "about-section" className="about-background"></div>
       <div className="magnifying">
         <div className="large-circular"></div>
         <div className="smaller-circular"></div>
@@ -86,37 +103,52 @@ export default function LandingPage() {
       </div>
       <div className="categories-title">CATEGORIES</div>
       <div className="employee-card"></div>
-      <div className="employee-title">Be an Employee</div>
+      <div className="employee-title">Employee</div>
       <div className="employee-description-text">
             Find job opportunities that match your skills!
             Post your profile and connect with employers
             looking for talent like you.
       </div>
       <div className="employee-button-landingpage">
-        <button >
-          <Link className="employee-button-background" to="/signupEmployee">
-            <text className="employee-button-text">Click</text>
+        <button
+            onClick={() => {
+                if(actionType === 'login') {
+                    navigate('/loginEmployee');
+                } else if(actionType === 'signup') {
+                    navigate('/signupEmployee');
+                }
+            }}
+            >
+            <span className="employee-button-background" to="/signupEmployee">
+            <span className="employee-button-text">Click</span>
             <div className="employee-arrow-button">
             <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
             </div>
-          </Link>
+            </span>
         </button>
       </div>
       <div className="employer-card"></div>
-      <div className="employer-text">Be an Employer</div>
+      <div className="employer-text">Employer</div>
       <div className="employer-description-text">
       Looking for skilled workers? Post job listings and
       discover qualified employees ready to be hired
       for your needs.
       </div>
       <div className="employer-buttons-landingpage">
-        <button>
-        <Link className="employer-button-background" to="/signupEmployer">
-          <text className="employer-button-text">Click</text>
+        <button
+        onClick={() => {
+            if(actionType === 'login') {
+                navigate('/loginEmployer');
+            } else if(actionType === 'signup') {
+                navigate('/signupEmployer');
+            }
+        }}>
+        <span className="employer-button-background" to="/signupEmployer">
+          <span className="employer-button-text">Click</span>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
           </div>
-        </Link>
+        </span>
         </button>
       </div>
       <div className="small-decorative"></div>

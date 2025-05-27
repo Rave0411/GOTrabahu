@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use App\Http\Requests\LoginEmployerRequest;
 use App\Http\Requests\SignupEmployerRequest;
 
 class EmployerAuthController extends Controller
@@ -32,22 +33,30 @@ class EmployerAuthController extends Controller
     }
 
 
-    public function loginEmployer(Request $request)
+    public function loginEmployer(LoginEmployerRequest $request)
     {
-    $data = $request->validated();
+        $data = $request->validated();
 
-    if (!Auth::attempt($data)){
-        return response([
-            'message'=> 'email or password are wrong',
-        ]);
-
-    $employer = Auth::employer();
-    $token = $employee->createToken('main')->plainTextToken;
-
-    return response()->json([
-        'employer' => $employer,
-        'token'=> $token
-    ]);
+        if (!Auth::guard('employer')->attempt($data)) {
+            return response([
+                'message' => 'email or password are wrong',
+            ], 401);
         }
+
+        $employer = Auth::guard('employer')->user();
+        $token = $employer->createToken('main')->plainTextToken;
+
+        return response()->json([
+            'employer' => $employer,
+            'token' => $token
+        ]);
+    }
+
+        public function logoutEmployer(Request $request)
+    {
+        $employer = $request ->employee();
+
+        $employer->currentAccessToken()->delete();
+        return response('',204);
     }
 }

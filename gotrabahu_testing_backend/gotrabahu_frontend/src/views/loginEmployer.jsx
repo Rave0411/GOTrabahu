@@ -35,9 +35,10 @@ export default function loginEmployer(){
             email: emailRef.current.value,
             password: passwordRef.current.value,
         }
-        axiosClient.post("/employers/login",payload).then(({data})=>{
+        axiosClient.post("/employers/loginEmployer",payload).then(({data})=>{
             setUser(data.user);
             setToken(data.token);
+            navigate('/dashboard');
     }).catch(err => {
         const response = err.response;
         if(response && response.status === 422){
@@ -91,13 +92,13 @@ export default function loginEmployer(){
             </form>
             </div>
             <div>
-            <button className="signin-button-bar" onClick={() => window.location.href = '/signup'}>
+            <button className="signin-button-bar" onClick={() => window.location.href = 'signupEmployer'}>
                 Sign in
             </button>
             </div>
             <div className="signin-text">
                   <p>
-                    Don't have an account? click <span> <button> <a className="signup-text-portal" href="signupemployee">Sign in</a> </button> </span> to create.
+                    Don't have an account? click <span> <button> <a className="signup-text-portal" href="signupEmployer">Sign in</a> </button> </span> to create.
                   </p>
             </div>
             <div>

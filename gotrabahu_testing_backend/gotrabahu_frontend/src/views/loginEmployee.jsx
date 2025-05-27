@@ -91,7 +91,7 @@ export default function loginEmployee(){
             </form>
             </div>
             <div>
-            <button className="signin-button-bar" onClick={() => window.location.href = '/signup'}>
+            <button className="signin-button-bar" onClick={() => window.location.href = 'signupEmployee'}>
                 Sign in
             </button>
             </div>
