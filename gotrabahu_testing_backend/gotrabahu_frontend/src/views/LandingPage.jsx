@@ -3,7 +3,7 @@ import { useNavigate, Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/Gologo.png";
 import iIcon from "../assets/images/abouticon.png";
-import arrowIcon from "../assets/images/Arrow.png";
+import arrowIcon from "../assets/images/arrow_1.png";
 import createIcon from "../assets/images/blackIcon.png";
 import joinIcon from "../assets/images/joinIcon.png";
 import findIcon from "../assets/images/magnifyingIcon.png";
@@ -103,7 +103,7 @@ export default function LandingPage() {
       </div>
       <div className="categories-title">CATEGORIES</div>
       <div className="employee-card"></div>
-      <div className="employee-title">Employee</div>
+      <div className="employee-title">Be an Employee</div>
       <div className="employee-description-text">
             Find job opportunities that match your skills!
             Post your profile and connect with employers
@@ -120,7 +120,7 @@ export default function LandingPage() {
             }}
             >
             <span className="employee-button-background" to="/signupEmployee">
-            <span className="employee-button-text">Click</span>
+            <span className="employee-button-text">Register now</span>
             <div className="employee-arrow-button">
             <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
             </div>
@@ -128,7 +128,7 @@ export default function LandingPage() {
         </button>
       </div>
       <div className="employer-card"></div>
-      <div className="employer-text">Employer</div>
+      <div className="employer-text">Be an Employer</div>
       <div className="employer-description-text">
       Looking for skilled workers? Post job listings and
       discover qualified employees ready to be hired
@@ -144,7 +144,7 @@ export default function LandingPage() {
             }
         }}>
         <span className="employer-button-background" to="/signupEmployer">
-          <span className="employer-button-text">Click</span>
+          <span className="employer-button-text">Register now</span>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
           </div>

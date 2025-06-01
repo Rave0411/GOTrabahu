@@ -11,6 +11,7 @@ import bodylogo from "../assets/images/Gologo.png";
 import email from "../assets/images/email picture.png";
 import passwordIcon from "../assets/images/password picture.png";
 import off from "../assets/images/eye-off.png";
+import on from "../assets/images/eye-on.png";
 
 export default function signupEmployer(){
     const [text, setText] = useState("");
@@ -27,6 +28,16 @@ export default function signupEmployer(){
     const [output, setOutput] = useState(null);
     const {setUser, setToken} = useStateContext();
     const navigate = useNavigate();
+
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+       };
+
+    const [isPasswordVisible2, setIsPasswordVisible2] = useState(false);
+    const togglePasswordVisibility2 = () => {
+    setIsPasswordVisible2(!isPasswordVisible2);
+       };
 
     const Submit =  (ev) =>{
         ev.preventDefault();
@@ -92,15 +103,19 @@ export default function signupEmployer(){
                       <span className="top-text-password_6">Create Password</span>
                       <input ref={emailRef} type="email" placeholder="Email" className="email-input-login_6"/>
                         <img src={passwordIcon} alt="password" className="password-icon-login_6"/>
-                       <input ref={passwordRef} id="hs-toggle-password" type="password" className="password-input-login_6" placeholder="Password"/>
-                       <input ref={confirmpasswordRef} type="password" className="confirm-password-input_6" id="confirmpassword" placeholder="Confirm Password"/>
                       <button type="submit" className="create-button_6">Create Account</button>
-                      <button type="button" className="password-show-hide_6" id="toggle-password-btn">
-                        <img src={off} className="eye-icon-employee_6" alt="eye-off"></img>
+                        <div>
+                        <input ref={passwordRef} id="hs-toggle-password" type={isPasswordVisible ? 'text' : 'password'} className="password-input-login_6" placeholder="Password"/>
+                        <button type="button" className="password-show-hide_6" onClick={togglePasswordVisibility}>
+                        <img src={isPasswordVisible ? on : off} className="eye-icon-employee_6" alt='eye'></img>
                         </button>
-                      <button type="button" className="password-show-hide2_6" id="toggle-password-btn">
-                        <img src={off} className="eye-icon-employee_6" alt="eye-off"></img>
-                      </button>
+                        </div>
+                        <div>
+                        <input ref={confirmpasswordRef} id="hs-toggle-password" type={isPasswordVisible2 ? 'text' : 'password'} className="confirm-password-input_6" placeholder="Password"/>
+                        <button type="button" className="password-show-hide2_6" onClick={togglePasswordVisibility2}>
+                        <img src={isPasswordVisible2 ? on : off} className="eye-icon-employee_6" alt='eye'></img>
+                        </button>
+                        </div>
                        <div>
                       <img src={email} alt="email" className="email-icon-login_6"/>
                     </div>
