@@ -102,7 +102,7 @@ export default function loginEmployee(){
             </div>
             <div>
               <button >
-              <a className="forgot-password" href="forgotpass">Forgot password</a>
+              <Link className="forgot-password" to="/forgot">Forgot password</Link>
               </button>
             </div>
       </section>
