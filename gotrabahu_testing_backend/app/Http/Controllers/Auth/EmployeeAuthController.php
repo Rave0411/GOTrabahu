@@ -56,8 +56,13 @@ class EmployeeAuthController extends Controller
         $employee = Auth::guard('employee')->user();
 
         if ($employee) {
-            $employee->tokens()->delete();
-            return response()->json(['message' => 'Logged out successfully'], 200);
+            // Revoke the current access token instead of deleting all tokens
+            $token = $request->user()->currentAccessToken();
+            if ($token) {
+                $token->delete();
+                return response()->json(['message' => 'Logged out successfully'], 200);
+            }
+            return response()->json(['message' => 'No current access token found'], 400);
         }
 
         return response()->json(['message' => 'Unable to logout'], 400);
