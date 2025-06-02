@@ -53,10 +53,14 @@ class EmployeeAuthController extends Controller
 
     public function logoutEmployee(Request $request)
     {
-        $employee = $request ->employee();
+        $employee = Auth::guard('employee')->user();
 
-        $employee->currentAccessToken()->delete();
-        return response('',204);
+        if ($employee) {
+            $employee->tokens()->delete();
+            return response()->json(['message' => 'Logged out successfully'], 200);
+        }
+
+        return response()->json(['message' => 'Unable to logout'], 400);
     }
 
 }

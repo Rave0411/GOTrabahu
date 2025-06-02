@@ -2057,7 +2057,7 @@ body {
 
 /* Adjusted the side bar items to be arranged from top to bottom */
 .side-bar {
-  display: flex;
+  display: overflow;
   flex-direction: column;
   align-items: flex-start;
   width: 222px;
@@ -2252,19 +2252,333 @@ width: 143px;
   border-radius: 6px;
 }
 
-/* Adjusted the available-posts class to make it a single scrollable container on the right side */
 .available-posts_8 {
   width: 316px;
-  height: 100%; /* Full height of the viewport */
+  height: 100%;
   background-color: rgb(206, 206, 206);
   opacity: 1;
-  position: fixed; /* Fixed position to stay on the right side */
+  position: fixed;
   top: 0;
-  right: 0; /* Align to the right side */
-  overflow-y: auto; /* Enable vertical scrolling */
-  border: none; /* Removed border */
+  right: 0;
+  overflow-y: auto;
+  border: none;
   padding: 10px;
-  border-radius: 0; /* Removed border radius */
+  border-radius: 0;
+}
+
+ }
+
+ /* Forgot Password */
+ @media (min-width: 600px) {
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+  font-family:  sans-serif;
+
+
+}.header-container_9 {
+  width: 1440px;
+  height: 59px;
+  background: rgb(255 255 255 / 22%);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+
+.header-logo_9 {
+  width: 349px;
+  height: 42.32px;
+  margin-top: 11px;
+  position: absolute;
+  left: 1091px;
+}
+
+.header-arrow_9 {
+  transition: 0.3s;
+  width: 39px;
+  height: 30px;
+  margin-top: 11px;
+  position: relative;
+  right: 1369px;
+  bottom: 0px;
+}
+
+.body-container_9 {
+  width: 1440px;
+  height: 965px;
+  background: rgba(255, 255, 255, 0);
+  opacity: 0.53;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin-bottom: 0px;
+
+}
+
+.body-logo_9 {
+  width: 173px;
+  height: 118px;
+  margin-top: 11px;
+  position: absolute;
+  left: 220px;
+  top: 77px;
+}
+
+.body-section_9 {
+  width: 1440px;
+  height: 965px;
+  background-image: url("./images/background.png");
+  background-size: cover;
+  margin-top: 59px;
+}
+
+.body-text_9 {
+  width: 500px;
+  height: 89px;
+  margin-top: 257px;
+  margin-left: 701px;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  position: absolute;
+  top: -3px;
+}
+
+.body-rectangular_9 {
+  width: 635px;
+  height: 517px;
+  margin-top: 59px;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+}
+
+.body-rectangular2_9 {
+  width: 635px;
+  height: 456px;
+  margin-top: 59px;
+  background: rgb(0, 0, 0);
+  opacity: 1;
+  position: absolute;
+  top: 520px;
+}
+
+.login-form_9 {
+  width: 155px;
+  height: 134px;
+  background: rgb(255, 255, 255);
+  opacity: 100%;
+  position: absolute;
+  top: 81px;
+  left: 227px;
+  border-radius: 9px;
+}
+
+.email-input_9 {
+  width: 358px;
+  height: 39px;
+  border-radius: 5px;
+  position: absolute;
+  padding: 10px 20px;
+  left: 139px;
+  top: 288px;
+  border: 1px solid #e5e7eb;
+}
+.code-input_9 {
+  width: 358px;
+  height: 39px;
+  border-radius: 5px;
+  position: absolute;
+  padding: 10px 20px;
+  left: 139px;
+  top: 378px;
+  border: 1px solid #e5e7eb;
+}
+
+.email-icon_9 {
+  width: 40px;
+  height: 43px;
+  position: absolute;
+  left: 93px;
+  top: 291px;
+}
+
+.email-text_9 {
+  width: 95px;
+  height: 16px;
+  font-size: 16px;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 153px;
+  top: 268px;
+}
+
+.password-input_9 {
+  position: absolute;
+  width: 358px;
+  height: 37px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 13px;
+  top: 647px;
+  left: 139px;
+  padding: 10px 20px;
+}
+
+.password-icon_9 {
+  width: 48px;
+  height: 42px;
+  position: absolute;
+  left: 93px;
+  top: 647px;
+}
+
+.password-text _9 {
+  width: 354px;
+  height: 16px;
+  font-size: 14px;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 144px;
+  top: 592px;
+}
+
+.code-text_9 {
+  width: 380px;
+  height: 17px;
+  font-size: 14px;
+  position: absolute;
+  left: 105px;
+  top: 328px;
+  color: white;
+}
+
+.password-show-hide_9 {
+  position: absolute;
+  left: 453px;
+  top: 648px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-input2_9 {
+  position: absolute;
+  width: 358px;
+  height: 37px;
+  border: 1px solid #e5e7eb;
+  border-radius: 5px;
+  font-size: 13px;
+  top: 719px;
+  left: 139px;
+  padding: 10px 20px;
+}
+
+.password-show-hide2_9 {
+  position: absolute;
+  left: 453px;
+  top: 721px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye-icon_9 {
+  width: 30px;
+  height: 30px;
+}
+
+.hidden_9 {
+  display: none;
+}
+
+.input-box_9 img {
+  width: 35px;
+  cursor: pointer;
+}
+
+.resend-code-button_9 {
+  width: 127px;
+  height: 55px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #000000;
+  position: absolute;
+  left: 269px;
+  top: 446px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+}
+
+.resend-code-button_9:hover {background-color: #3e8e41}
+
+.resend-code-button_9:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.verify-code-button_9 {
+  width: 127px;
+  height: 55px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(255 255 255);
+  position: absolute;
+  left: 420px;
+  top: 446px;
+  background-color: #96b753;
+  border: none;
+  border-radius: 5px;
+}
+
+.verify-code-button_9:hover {background-color: #b8b8b8}
+
+.verify-code-button:active {
+  background-color: #747c74;
+  transform: translateY(4px);
+}
+
+.set-password-button_9 {
+  width: 127px;
+  height: 55px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: rgb(255 255 255);
+  position: absolute;
+  left: 420px;
+  top: 783px;
+  background-color: #96b753;
+  border: none;
+  border-radius: 5px;
+}
+
+.set-password-button_9:hover {background-color: #b8b8b8}
+
+.set-password-button_9:active {
+  background-color: #747c74;
+  transform: translateY(4px);
 }
 
  }

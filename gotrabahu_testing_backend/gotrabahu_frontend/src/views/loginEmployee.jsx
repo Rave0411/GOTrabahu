@@ -11,6 +11,7 @@ import email from "../assets/images/email picture.png";
 import passwordIcon from "../assets/images/password picture.png";
 import off from "../assets/images/eye-off.png";
 import { useNavigate } from "react-router-dom";
+import on from "../assets/images/eye-on.png";
 
 
 export default function loginEmployee(){
@@ -19,8 +20,10 @@ export default function loginEmployee(){
     const handleChange = (event) => {
         setText(event.target.value);
     }
-    const eyeicon = document.getElementById('eyeicon');
-    const password = document.getElementById('password');
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+       };
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -79,9 +82,9 @@ export default function loginEmployee(){
           </div>
           <div>
               <img src={passwordIcon} alt="password" className="password-icon-login"/>
-             <input ref={passwordRef} id="hs-toggle-password" type="password" className="password-input-login" placeholder="Password"/>
-              <button type="button" className="password-show-hide" id="toggle-password-btn">
-              <img src={off} className="eye-icon-login" alt="eye-off-2">
+             <input ref={passwordRef} id="hs-toggle-password" type={isPasswordVisible ? 'text' : 'password'}className="password-input-login" placeholder="Password"/>
+              <button type="button" className="password-show-hide" onClick={togglePasswordVisibility}>
+              <img src={isPasswordVisible ? on : off} className="eye-icon-login" alt="eye">
                 </img>
               </button>
           </div>

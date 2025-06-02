@@ -190,7 +190,7 @@ export default function LandingPage() {
         &copy; All rights reserved 2025. GOTrabahu
       </div>
     </div>
-        <Outlet/>
+        {/* Remove Outlet here if LandingPage is not a layout */}
     </div>
   );
 

@@ -1,9 +1,9 @@
-import logo from "./images/header logo.jpg";
-import arrow from "./images/arrow.png";
-import bodylogo from "./images/logo.png";
-import email from "./images/email picture.png";
-import passwordIcon from "./images/password picture.png";
-import on from "./images/eye-on.png";
+import logo from "../assets/images/header logo.jpg";
+import arrow from "../assets/images/arrow.png";
+import bodylogo from "../assets/images/Gologo.png";
+import email from "../assets/images/email picture.png";
+import passwordIcon from "../assets/images/password picture.png";
+import on from "../assets/images/eye-on.png";
 
 export default function forgotPassword(){
      const onClick = () => {

@@ -5,10 +5,7 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\Auth\EmployeeAuthController;
 use App\Http\Controllers\Auth\EmployerAuthController;
 
-Route::get('/', function () {
-       $posts = Post::all();
-    return view('/dashboard', ['posts' => $posts]);
-});
+// Removed root route returning view from api.php as it is not typical for API routes
 
 Route::prefix('employees')->group(function () {
     Route::post('/signupEmployee', [EmployeeAuthController::class, 'signupEmployee']);
@@ -19,7 +16,12 @@ Route::prefix('employees')->group(function () {
 Route::prefix('employers')->group(function () {
     Route::post('/signupEmployer', [EmployerAuthController::class, 'signupEmployer']);
     Route::post('/loginEmployer', [EmployerAuthController::class, 'loginEmployer']);
-    Route::middleware('auth:sanctum')->post('/logoutEmployer', [EmployeeAuthController::class, 'logoutEmployer']);
+    Route::middleware('auth:sanctum')->post('/logoutEmployer', [EmployerAuthController::class, 'logoutEmployer']);
 });
 
-Route::post('/createPost', [PostController::class, 'createPost']);
+Route::middleware('auth:sanctum')->group(function () {
+    Route::post('/createPost', [PostController::class, 'createPost']);
+    Route::put('/updatePost/{post}', [PostController::class, 'updatePost']);
+    Route::delete('/deletePost/{post}', [PostController::class, 'deletePost']);
+    Route::get('/showEditPost/{post}', [PostController::class, 'showEditScreen']);
+});

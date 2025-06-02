@@ -1,18 +1,30 @@
-import {Outlet} from 'react-router-dom';
+import React from 'react';
+import { Outlet, Navigate } from 'react-router-dom';
 import { useStateContext } from '../contexts/contextprovider';
-import { Navigate } from 'react-router-dom';
-
+import axiosClient from '../axiosClient';
 
 export default function GuestLayout(){
-    const {token} = useStateContext();
+    const {token, setUser, setToken} = useStateContext();
+
     if(token){
-        return <Navigate to='/landingpage'/>
+        return <Navigate to='/dashboard'/>
     }
+
+    const onLogout = (ev) => {
+        ev.preventDefault();
+        axiosClient.post('/employees/logoutEmployee')
+        .then(() => {
+            setUser(null);
+            setToken(null);
+        });
+    };
+
     return(
-        <div>
-            <div>
-            </div>
-            <Outlet/>
+        <div className="app-layout">
+
+            <main>
+                <Outlet />
+            </main>
         </div>
     )
 }

@@ -64,7 +64,7 @@ export default function signupEmployee(){
           console.log('Signup response data', data);
           setUser(data.employee);
           setToken(data.token);
-          navigate('/dashboard');
+          navigate('/posts');
 
         }).catch(err => {
             const response = err.response;

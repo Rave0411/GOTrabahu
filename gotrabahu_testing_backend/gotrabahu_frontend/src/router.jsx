@@ -8,6 +8,7 @@ import LandingPage from './views/LandingPage.jsx';
 import Profile from './views/profile.jsx';
 import GuestLayout from './components/GuestLayout.jsx';
 import DefaultLayout from './components/DefaultLayout.jsx';
+import Forgot from './views/forgotPassword.jsx';
 
 
 const router = createBrowserRouter ([
@@ -31,9 +32,13 @@ const router = createBrowserRouter ([
                     path: '/signupEmployee',
                     element:  <SignupEmployee />,
                 },
-                    {
+                {
                     path: '/signupEmployer',
                     element:  <SignupEmployer />,
+                },
+                {
+                    path: '/forgot',
+                    element:  <Forgot />,
                 },
         ]
     },
