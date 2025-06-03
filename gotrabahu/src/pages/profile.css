@@ -1,0 +1,505 @@
+@media (min-width: 600px) {
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+      font-family:  sans-serif;
+    }
+
+    .top-rec-editprofile {
+      width: 115px;
+      height: 40px;
+      background: rgb(7, 114, 12);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      position: absolute;
+      border-radius: 10px;
+      top: 60px;
+      left: 40px;
+    }
+
+    .text-editprofile {
+      width: 100%;
+      height: 20px;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    
+    .top-shape-editprofile {
+      width: 1920px;
+      height: 60px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .logo-editprofile {
+      width: 290px;
+      height: 40px;
+      margin-top: 5px;
+      position: absolute;
+      right: 30px;
+      top: 8px
+    }
+
+    .pic{
+        width: 180px;
+        height: 170px;
+        position: absolute;
+        position-area: center;
+        border-radius: 50%;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    .header-white-rec_7 {
+      width: 100%;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .header-logo-editprofile {
+      width: 349px;
+      height: 42.32px;
+      margin-top: 11px;
+      position: absolute;
+      left: 1091px;
+    }
+    .header-arrow-editprofile {
+      transition: 0.3s;
+      width: 39px;
+      height: 30px;
+      margin-top: 11px;
+      position: relative;
+      right: 1369px;
+      bottom: 0px;
+    }
+    
+
+    .green-employee-editprofile {
+      width: 600px;
+      height: 897px;
+      background: rgb(32, 158, 15);
+      background-image: linear-gradient(40deg, green, white);
+      opacity: 1;
+      position: absolute;
+      top: 19px;
+      left: -8px;
+    }
+
+    .grey-fade-editprofile {
+      width: 1320px;
+      height: 898px;
+      background: rgba(0, 0, 0, 0.7);
+      opacity: 1;
+      position: absolute;
+      top: 18px;
+      left: 592px;
+    }
+
+    .top-text-01 {
+      width: 413px;
+      height: 20px;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 770px;
+      top: 80px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    
+    .White-box-01 {
+      width: 1000px;
+      height: 650px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 1;
+      position: absolute;
+      top: 100px;
+      left: 750px;
+      border-radius: 10px;
+    }
+    
+    .container-editprofile {
+      position: absolute;
+    }
+  
+    .background-editprofile {
+      width: 1920px;
+      height: 896px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: fixed;
+      background-size: cover;
+      top: 20px;
+      left: -8px;
+      overflow: hidden;
+    }
+    
+    .body-text_7 {
+      width: 680px;
+      height: 89px;
+      margin-top: 257px;
+      margin-left: 701px;
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      font-family: sans-serif;
+      position: absolute;
+      top: -3px;
+    }
+    
+    .back-button-editprofile {
+      transition: 0.3s;
+      width: 20px;
+      background-color: #ffffff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      background-image: url("./images/Arrow.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 5px;
+      height: 18px;
+      position: absolute;
+      left: 30px;
+      top: 18px;
+    }
+    
+    
+    .Profile-Picture {
+      width: 183px;
+      height: 173px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 100%;
+      position: absolute;
+      background-position: center;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      border-radius: 50%;
+      top: 98px;
+      left: 229px;
+    }
+    
+    .edit-profile-text {
+      width: 100%;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      text-decoration: underline;
+      background-position: center;
+      left: 0px;
+      top: 180px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+
+    .LastName-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      left: 100px;
+      top: 50px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+    
+    .FirstName-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 330px;
+      top: 50px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .MiddleName-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 560px;
+      top: 50px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Extension-01 {
+      width: 60px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 790px;
+      top: 50px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Gender-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Age-01 {
+      width: 70px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 355px;
+      top: 100px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .DateofBirth-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 470px;
+      top: 100px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Nationality-01 {
+      width: 150px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 701px;
+      top: 100px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Email-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 155px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .ContactNumber-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 330px;
+      top: 155px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Division-Line1{
+      width: 100%;
+      height: 1px;
+      background-color: #dec7c7;
+      position: absolute;
+      top: 226px;
+      left: 0px;
+    }
+
+    .Division-Line2{
+      width: 100%;
+      height: 1px;
+      background-color: #dec7c7;
+      position: absolute;
+      top: 408px;
+      left: 0px;
+    }
+
+    .Address-01 {
+      width: 755px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 280px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Province-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 340px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .City-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 310px;
+      top: 340px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Barangay-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 520px;
+      top: 340px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Zip-Code-01 {
+      width: 127px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 730px;
+      top: 340px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Emergency-contact-01 {
+      width: 755px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 450px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Emergency-address-01 {
+      width: 755px;
+      height: 20px;
+      font-size: 16px;
+      color: rgb(0, 0, 0);
+      background-color: rgb(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 500px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Emergency-num-01 {
+      width: 200px;
+      height: 20px;
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      background-color: rgba(215 229 172);
+      border-radius: 0%;
+      position: absolute;
+      left: 100px;
+      top: 550px;
+      text-align: left;
+      font-family: sans-serif;
+    }
+
+    .Done-button-editprofile {
+      width: 150px;
+      height: 35px;
+      text-align: center;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      left: 1550px;
+      top: 780px;
+      background-color: #96b753;
+      border: none;
+      border-radius: 9px;
+    }
+    
+    .Done-button-01{
+      width: 100%;
+      height: 15px;
+      color: #050505;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      position-area: center;
+      position: absolute;
+      top: 0px;
+    }

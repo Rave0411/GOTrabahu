@@ -1,0 +1,373 @@
+@media (min-width: 600px) {
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+      font-family:  sans-serif;
+    }
+
+    .top-rec-employer {
+      width: 115px;
+      height: 40px;
+      background: rgb(7, 114, 12);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      position: absolute;
+      border-radius: 10px;
+      top: 60px;
+      left: 40px;
+    }
+
+    .text-employer {
+      width: 100%;
+      height: 20px;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    
+    .top-shape-login {
+      width: 1920px;
+      height: 60px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .logo-signup {
+      width: 290px;
+      height: 40px;
+      margin-top: 5px;
+      position: absolute;
+      right: 30px;
+      top: 8px
+    }
+
+    .Gologo-login {
+        width: 100%;
+        height: 120px;
+        position: absolute;
+        position-area: center;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    .header-white-rec{
+      width: 100%;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .header-logo-login {
+      width: 349px;
+      height: 42.32px;
+      margin-top: 11px;
+      position: absolute;
+      left: 1091px;
+    }
+    .header-arrow-login {
+      transition: 0.3s;
+      width: 39px;
+      height: 30px;
+      margin-top: 11px;
+      position: relative;
+      right: 1369px;
+      bottom: 0px;
+    }
+    
+
+    .grey-fade-signup {
+      width: 600px;
+      height: 897px;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+      position: absolute;
+      top: 19px;
+      left: -8px;
+    }
+    
+    .body-logo-login {
+      width: 173px;
+      height: 118px;
+      margin-top: 11px;
+      position: absolute;
+      left: 220px;
+      top: 96px;
+    }
+    
+    .container-login {
+      position: absolute;
+    }
+  
+    .background-signup {
+      width: 1920px;
+      height: 896px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: fixed;
+      background-size: cover;
+      top: 20px;
+      left: -8px;
+      overflow: hidden;
+    }
+    
+    .body-text-login {
+      width: 680px;
+      height: 89px;
+      margin-top: 257px;
+      margin-left: 701px;
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      font-family: sans-serif;
+      position: absolute;
+      top: -3px;
+    }
+    
+    .back-button-signup {
+      transition: 0.3s;
+      width: 35px;
+      background-color: #d7e4ac;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      background-image: url("./images/backarrowblack.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 5px;
+      height: 26px;
+      position: absolute;
+      left: 30px;
+      top: 18px;
+    }
+    
+    
+    .login-form {
+      width: 155px;
+      height: 134px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 100%;
+      position: absolute;
+      top: 98px;
+      left: 229px;
+    }
+
+    .top-text-email {
+        width: 349px;
+        height: 20px;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 140px;
+        top: 255px;
+        font-family: sans-serif;
+    }
+    
+    .top-text-password {
+      width: 349px;
+      height: 20px;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 140px;
+      top: 350px;
+      font-family: sans-serif;
+    }
+
+    .email-input-login {
+      width: 358px;
+      height: 39px;
+      border-radius: 5px;
+      position: absolute;
+      padding: 10px 20px;
+      left: 139px;
+      top: 276px;
+      border: 1px solid #e5e7eb; 
+    }
+    
+    .email-icon-login {
+      width: 40px;
+      height: 43px;
+      position: absolute;
+      left: 93px;
+      top: 277px;
+    }
+    
+    
+    .password-input-login {
+      position: absolute;
+      width: 358px;
+      height: 37px;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      font-size: 13px;
+      top: 370px;
+      left: 139px;
+      padding: 10px 20px;
+    }
+    
+    .password-icon-login {
+      width: 50px;
+      height: 42px;
+      position: absolute;
+      left: 87px;
+      top: 370px;
+    }
+
+    .confirm-password-input {
+        position: absolute;
+      width: 358px;
+      height: 37px;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      font-size: 13px;
+      top: 420px;
+      left: 139px;
+      padding: 10px 20px;
+    }
+    
+
+    .Password-length {
+      width: 275px;
+      height: 22px;
+      position: absolute;
+      font-size: 13px;
+      left: 139px;
+      top: 463px;
+      color: white
+      
+    }
+    
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+    .forgot-password:active {
+      text-decoration: underline;
+    }
+    
+    .password-show-hide {
+      position: absolute;
+      left: 453px;
+      top: 338px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .eye-off {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .eye-icon-employer {
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      bottom: 250px;
+      left: 5px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .input-box img {
+      width: 35px;
+      cursor: pointer;
+    }
+    
+    .Create-Button-employer {
+      width: 150px;
+      height: 35px;
+      text-align: center;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      left: 390px;
+      top: 505px;
+      background-color: #96b753;
+      border: none;
+      border-radius: 9px;
+    }
+
+    .Create-button-text-employer{
+      width: 100%;
+      height: 15px;
+      color: #050505;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      position-area: center;
+      position: absolute;
+      top: 0px;
+    }
+    
+    .login-button:hover {background-color: #3e8e41}
+    
+    .login-button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    
+    .signin-bar-signup {
+      width: 100px;
+      height: 35px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      left: 396px;
+      top: 540px;
+      background-color: #ffffff;
+      border: none;
+      border-radius: 9px;
+    }
+    
+    .signin-button-text{
+      width: 100%;
+      height: 100%;
+      color: #000;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .signin-button:hover {background-color: #b8b8b8}
+    
+    .signin-button:active {
+      background-color: #747c74;
+      transform: translateY(4px);
+    }
+    
+    .signin-text {
+      width: 305px;
+      height: 65px;
+      font-size: 13px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 155px;
+      top: 575px;
+      font-family: sans-serif;
+    
+    }
+     .signin-text2 {
+    text-decoration: underline;
+    }

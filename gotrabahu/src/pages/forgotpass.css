@@ -1,0 +1,319 @@
+/* Forgot password page css */
+
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+    font-family:  sans-serif;
+  
+  
+  }.header-container-forgotpass {
+    width: 1440px;
+    height: 59px;
+    background: rgb(255 255 255 / 22%);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+  }
+  
+  .header-logo-forgotpass1 {
+    width: 290px;
+    height: 40px;
+    margin-top: 5px;
+    position: absolute;
+    right: 30px;
+    top: 8px
+  }
+  
+  .forgotpass-back-arrow {
+    transition: 0.3s;
+    width: 39px;
+    height: 30px;
+    margin-top: 11px;
+    position: relative;
+    right: 1369px;
+    bottom: 0px;
+  }
+  
+  .container-forgatpass {
+    width: 1440px;
+    height: 900px;
+    background: rgba(255, 255, 255, 0);
+    opacity: 0.53;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 0px;
+    
+  }
+  
+  .body-logo {
+    width: 173px;
+    height: 118px;
+    margin-top: 11px;
+    position: absolute;
+    left: 220px;
+    top: 77px;
+  }
+  
+  .background-forgotpass {
+    width: 1920px;
+    height: 900px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    top: 59px;
+    left: 0px;
+    overflow: hidden;
+  }
+  
+  .body-text {
+    width: 500px;
+    height: 89px;
+    margin-top: 257px;
+    margin-left: 701px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    position: absolute;
+    top: -3px;
+  }
+  
+  .grey-box-rectangular1 {
+    width: 635px;
+    height: 438px;
+    margin-top: 59px;
+    background: rgb(0, 0, 0, 0.5);
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px
+  }
+  
+  .grey-box-rectangular2 {
+    width: 635px;
+    height: 460px;
+    margin-top: 59px;
+    background: rgb(0, 0, 0, 0.5);
+    opacity: 1;
+    position: absolute;
+    top: 440px;
+    left: 0px;
+  }
+  
+  .login-form {
+    width: 155px;
+    height: 134px;
+    background: rgb(255, 255, 255);
+    opacity: 100%;
+    position: absolute;
+    top: 81px;
+    left: 227px;
+    border-radius: 9px;
+  }
+  
+  .email-input {
+    width: 358px;
+    height: 39px;
+    border-radius: 5px;
+    position: absolute;
+    padding: 10px 20px;
+    left: 139px;
+    top: 288px;
+    border: 1px solid #e5e7eb; 
+  }
+  .code-input {
+    width: 358px;
+    height: 39px;
+    border-radius: 5px;
+    position: absolute;
+    padding: 10px 20px;
+    left: 139px;
+    top: 378px;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .email-icon {
+    width: 40px;
+    height: 43px;
+    position: absolute;
+    left: 93px;
+    top: 291px;
+  }
+  
+  .email-text {
+    width: 95px;
+    height: 16px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 153px;
+    top: 268px;
+  }
+  
+  .password-input {
+    position: absolute;
+    width: 358px;
+    height: 37px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-size: 13px;
+    top: 647px;
+    left: 139px;
+    padding: 10px 20px;
+  }
+  
+  .password-icon {
+    width: 48px;
+    height: 42px;
+    position: absolute;
+    left: 93px;
+    top: 647px;
+  }
+  
+  .password-text{
+    width: 354px;
+    height: 16px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    left: 144px;
+    top: 592px;
+  }
+  
+  .code-text {
+    width: 380px;
+    height: 17px;
+    font-size: 14px;
+    position: absolute;
+    left: 105px;
+    top: 328px;
+    color: white;
+  }
+  
+  .password-show-hide {
+    position: absolute;
+    left: 453px;
+    top: 648px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .password-input2 {
+    position: absolute;
+    width: 358px;
+    height: 37px;
+    border: 1px solid #e5e7eb;
+    border-radius: 5px;
+    font-size: 13px;
+    top: 719px;
+    left: 139px;
+    padding: 10px 20px;
+  }
+  
+  .password-show-hide2 {
+    position: absolute;
+    left: 453px;
+    top: 721px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .eye-icon {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .input-box img {
+    width: 35px;
+    cursor: pointer;
+  }
+  
+  .resend-code-button {
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #000000;
+    position: absolute;
+    left: 290px;
+    top: 440px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .resend-code-button:hover {background-color: #3e8e41}
+  
+  .resend-code-button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+  
+  .verify-code-button {
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255 255 255);
+    position: absolute;
+    left: 420px;
+    top: 440px;
+    background-color: #96b753;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .verify-code-button:hover {background-color: #b8b8b8}
+  
+  .verify-code-button:active {
+    background-color: #747c74;
+    transform: translateY(4px);
+  }
+  
+  .set-password-button {
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: rgb(255 255 255);
+    position: absolute;
+    left: 420px;
+    top: 785px;
+    background-color: #96b753;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .set-password-button:hover {background-color: #b8b8b8}
+  
+  .set-password-button:active {
+    background-color: #747c74;
+    transform: translateY(4px);
+  }

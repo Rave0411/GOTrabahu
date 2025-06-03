@@ -1,0 +1,373 @@
+@media (min-width: 600px) {
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 14px;
+      font-family:  sans-serif;
+    }
+
+    .top-rec-employee_6 {
+      width: 115px;
+      height: 40px;
+      background: rgb(7, 114, 12);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      position: absolute;
+      border-radius: 10px;
+      top: 60px;
+      left: 40px;
+    }
+
+    .text-employee_6 {
+      width: 100%;
+      height: 20px;
+      font-size: 18px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 0px;
+      top: 10px;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    
+    .top-shape-login_6 {
+      width: 1920px;
+      height: 60px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 100%;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .logo-signup_6 {
+      width: 290px;
+      height: 40px;
+      margin-top: 5px;
+      position: absolute;
+      right: 30px;
+      top: 8px
+    }
+
+    .Gologo-login_6 {
+        width: 100%;
+        height: 120px;
+        position: absolute;
+        position-area: center;
+        top: 0px;
+        left: 0px;
+      }
+    }
+    .header-white-rec_6 {
+      width: 100%;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    
+    .header-logo-login_6 {
+      width: 349px;
+      height: 42.32px;
+      margin-top: 11px;
+      position: absolute;
+      left: 1091px;
+    }
+    .header-arrow-login_6 {
+      transition: 0.3s;
+      width: 39px;
+      height: 30px;
+      margin-top: 11px;
+      position: relative;
+      right: 1369px;
+      bottom: 0px;
+    }
+    
+
+    .grey-fade-signup_6 {
+      width: 600px;
+      height: 897px;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 1;
+      position: absolute;
+      top: 19px;
+      left: -8px;
+    }
+    
+    .body-logo-login_6 {
+      width: 173px;
+      height: 118px;
+      margin-top: 11px;
+      position: absolute;
+      left: 220px;
+      top: 96px;
+    }
+    
+    .container-login_6 {
+      position: absolute;
+    }
+  
+    .background-signup_6 {
+      width: 1920px;
+      height: 896px;
+      position: absolute;
+      background-repeat: no-repeat;
+      background-position: fixed;
+      background-size: cover;
+      top: 20px;
+      left: -8px;
+      overflow: hidden;
+    }
+    
+    .body-text_6 {
+      width: 680px;
+      height: 89px;
+      margin-top: 257px;
+      margin-left: 701px;
+      font-size: 40px;
+      font-weight: bold;
+      color: rgb(0, 0, 0);
+      font-family: sans-serif;
+      position: absolute;
+      top: -3px;
+    }
+    
+    .back-button-signup_6 {
+      transition: 0.3s;
+      width: 35px;
+      background-color: #d7e4ac;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      background-image: url("./images/backarrowblack.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      border-radius: 5px;
+      height: 26px;
+      position: absolute;
+      left: 30px;
+      top: 18px;
+    }
+    
+    
+    .login-form_6 {
+      width: 155px;
+      height: 134px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+      opacity: 100%;
+      position: absolute;
+      top: 98px;
+      left: 229px;
+    }
+
+    .top-text-email_6 {
+        width: 349px;
+        height: 20px;
+        font-size: 15px;
+        color: rgb(255, 255, 255);
+        position: absolute;
+        left: 140px;
+        top: 255px;
+        font-family: sans-serif;
+    }
+    
+    .top-text-password_6 {
+      width: 349px;
+      height: 20px;
+      font-size: 15px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 140px;
+      top: 350px;
+      font-family: sans-serif;
+    }
+
+    .email-input-login_6 {
+      width: 358px;
+      height: 39px;
+      border-radius: 5px;
+      position: absolute;
+      padding: 10px 20px;
+      left: 139px;
+      top: 276px;
+      border: 1px solid #e5e7eb; 
+    }
+    
+    .email-icon-login_6 {
+      width: 40px;
+      height: 43px;
+      position: absolute;
+      left: 93px;
+      top: 277px;
+    }
+    
+    
+    .password-input-login_6 {
+      position: absolute;
+      width: 358px;
+      height: 37px;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      font-size: 13px;
+      top: 370px;
+      left: 139px;
+      padding: 10px 20px;
+    }
+    
+    .password-icon-login_6 {
+      width: 50px;
+      height: 42px;
+      position: absolute;
+      left: 87px;
+      top: 370px;
+    }
+
+    .confirm-password-input_6 {
+        position: absolute;
+      width: 358px;
+      height: 37px;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      font-size: 13px;
+      top: 420px;
+      left: 139px;
+      padding: 10px 20px;
+    }
+    
+
+    .Password-length_6 {
+      width: 275px;
+      height: 22px;
+      position: absolute;
+      font-size: 13px;
+      left: 139px;
+      top: 463px;
+      color: white
+      
+    }
+    
+    .forgot-password:hover {
+      text-decoration: underline;
+    }
+    .forgot-password:active {
+      text-decoration: underline;
+    }
+    
+    .password-show-hide {
+      position: absolute;
+      left: 453px;
+      top: 338px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .eye-off_6 {
+      width: 30px;
+      height: 30px;
+    }
+    
+    .eye-icon-employee_6 {
+      width: 30px;
+      height: 25px;
+      position: absolute;
+      bottom: 250px;
+      left: 5px;
+    }
+    
+    .hidden {
+      display: none;
+    }
+    
+    .input-box img {
+      width: 35px;
+      cursor: pointer;
+    }
+    
+    .login-bar-signup_6 {
+      width: 100px;
+      height: 35px;
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      outline: none;
+      color: #000000;
+      position: absolute;
+      left: 396px;
+      top: 495px;
+      background-color: #4aad5a;
+      border: none;
+      border-radius: 9px;
+    }
+
+    .login-button-text_6 {
+      width: 100%;
+      height: 100%;
+      color: #000000;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+    }
+    
+    .login-button:hover {background-color: #3e8e41}
+    
+    .login-button:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
+    
+    .Create-button_6 {
+      width: 150px;
+      height: 35px;
+      text-align: center;
+      cursor: pointer;
+      color: rgb(0, 0, 0);
+      position: absolute;
+      left: 390px;
+      top: 505px;
+      background-color: #96b753;
+      border: none;
+      border-radius: 9px;
+    }
+    
+    .Create-account-text{
+      width: 100%;
+      height: 15px;
+      color: #050505;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      text-align: center;
+      position-area: center;
+      position: absolute;
+      top: 0px;
+    }
+    
+    .signin-button:hover {background-color: #b8b8b8}
+    
+    .signin-button:active {
+      background-color: #747c74;
+      transform: translateY(4px);
+    }
+    
+    .signin-text_6 {
+      width: 305px;
+      height: 65px;
+      font-size: 13px;
+      color: rgb(255, 255, 255);
+      position: absolute;
+      left: 155px;
+      top: 575px;
+      font-family: sans-serif;
+    
+    }
+     .signin-text2_6 {
+    text-decoration: underline;
+    }
