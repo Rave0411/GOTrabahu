@@ -11,6 +11,8 @@ import bodylogo from "../assets/images/Gologo.png";
 import email from "../assets/images/email picture.png";
 import passwordIcon from "../assets/images/password picture.png";
 import off from "../assets/images/eye-off.png";
+import on from "../assets/images/eye-on.png"
+
 
 export default function signupEmployee(){
     const [text, setText] = useState("");
@@ -19,6 +21,16 @@ export default function signupEmployee(){
     }
     const eyeicon = document.getElementById('eyeicon');
     const password = document.getElementById('password');
+
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+       };
+
+    const [isPasswordVisible2, setIsPasswordVisible2] = useState(false);
+    const togglePasswordVisibility2 = () => {
+    setIsPasswordVisible2(!isPasswordVisible2);
+       };
 
     const emailRef = useRef();
     const passwordRef = useRef();
@@ -48,9 +60,12 @@ export default function signupEmployee(){
             password: password,
         };
 
-          axiosClient.post("/signupEmployee",payload).then(({data})=>{
-          setUser(data.user);
+          axiosClient.post("/employees/signupEmployee",payload).then(({data})=>{
+          console.log('Signup response data', data);
+          setUser(data.employee);
           setToken(data.token);
+          navigate('/posts');
+
         }).catch(err => {
             const response = err.response;
             if(response && response.status === 422){
@@ -60,7 +75,7 @@ export default function signupEmployee(){
     }
 
     return(
-          <div>
+    <div>
       {/* Header Section */}
       <section className="header-section-login_6">
         <div className="top-shape-login_6"></div>
@@ -69,7 +84,7 @@ export default function signupEmployee(){
           <img src={arrow} alt = "header-arrow_6"/>
         </div>
         <button>
-          <a className="back-button-signup_6" href="login"/>
+          <Link className="back-button-signup_6" to="/"/>
         </button>
       </section>
 
@@ -92,22 +107,26 @@ export default function signupEmployee(){
             <span className="top-text-password_6">Create Password</span>
             <input ref={emailRef} type="email" placeholder="Email" className="email-input-login_6"/>
               <img src={passwordIcon} alt="password" className="password-icon-login_6"/>
-             <input ref={passwordRef} id="hs-toggle-password" type="password" className="password-input-login_6" placeholder="Password"/>
-             <input ref={confirmpasswordRef} type="password" className="confirm-password-input_6" id="confirmpassword" placeholder="Confirm Password"/>
             <button type="submit" className="create-button_6">Create Account</button>
-            <button type="button" className="password-show-hide_6" id="toggle-password-btn">
-              <img src={off} className="eye-icon-employee_6" alt="eye-off"></img>
+            <div>
+            <input ref={passwordRef} id="hs-toggle-password" type={isPasswordVisible ? 'text' : 'password'} className="password-input-login_6" placeholder="Password"/>
+            <button type="button" className="password-show-hide_6" onClick={togglePasswordVisibility}>
+              <img src={isPasswordVisible ? on : off} className="eye-icon-employee_6" alt='eye'></img>
               </button>
-            <button type="button" className="password-show-hide2_6" id="toggle-password-btn">
-              <img src={off} className="eye-icon-employee_6" alt="eye-off"></img>
+              </div>
+              <div>
+            <input ref={confirmpasswordRef} type={isPasswordVisible2 ? 'text' : 'password'} className="confirm-password-input_6" id="confirmpassword" placeholder="Confirm Password"/>
+            <button type="button" className="password-show-hide2_6" id="toggle-password-btn" onClick={togglePasswordVisibility2}>
+              <img src={isPasswordVisible2 ? on : off} className="eye-icon-employee_6" alt="eye"></img>
             </button>
+            </div>
              <div>
             <img src={email} alt="email" className="email-icon-login_6"/>
           </div>
             </form>
             </div>
             <div className="login-text_6">
-            <p>Already have an account? click <span> <button> <a className="login-text-portal" href="login">Log in</a> </button> </span> to proceed.</p>
+            <p>Already have an account? click <span> <button> <Link className="login-text-portal" to="/loginEmployee">Log in</Link> </button> </span> to proceed.</p>
             </div>
               <div className="Password-length_6">Password must contain atleast 8 Characters</div>
         </section>

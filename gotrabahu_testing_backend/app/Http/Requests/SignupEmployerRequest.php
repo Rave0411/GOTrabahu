@@ -2,10 +2,10 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rules\Password;
+use Illuminate\Foundation\Http\FormRequest;
 
-class LoginRequest extends FormRequest
+class SignupEmployerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,9 +23,12 @@ class LoginRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'email' => 'required|email',
+            'name' => 'nullable|string|max:255',
+            'email' => 'required|email|unique:employees,email',
             'password' => [
-                'required'
+                'required',
+                Password::min(8)
+                ->letters()
             ]
         ];
     }

@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
-import axiosClient from "../axiosClient";
+import axiosClient from "../axiosClient.js";
 import { useStateContext } from "../contexts/contextprovider.jsx";
 import { useState } from "react";
 import logo from "../assets/images/header logo.jpg";
@@ -10,24 +10,26 @@ import bodylogo from "../assets/images/Gologo.png";
 import email from "../assets/images/email picture.png";
 import passwordIcon from "../assets/images/password picture.png";
 import off from "../assets/images/eye-off.png";
+import { useNavigate } from "react-router-dom";
+import on from "../assets/images/eye-on.png";
 
 
-
-
-
-export default function login(){
+export default function loginEmployee(){
 
     const [text, setText] = useState("");
     const handleChange = (event) => {
         setText(event.target.value);
     }
-    const eyeicon = document.getElementById('eyeicon');
-    const password = document.getElementById('password');
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+       };
 
     const emailRef = useRef();
     const passwordRef = useRef();
 
     const {setUser, setToken} = useStateContext();
+    const navigate = useNavigate();
 
     const Submit =  (ev) =>{
         ev.preventDefault();
@@ -35,9 +37,10 @@ export default function login(){
             email: emailRef.current.value,
             password: passwordRef.current.value,
         }
-        axiosClient.post("/login",payload).then(({data})=>{
+        axiosClient.post("/employees/loginEmployee",payload).then(({data})=>{
             setUser(data.user);
             setToken(data.token);
+            navigate('/dashboard');
     }).catch(err => {
         const response = err.response;
         if(response && response.status === 422){
@@ -79,9 +82,9 @@ export default function login(){
           </div>
           <div>
               <img src={passwordIcon} alt="password" className="password-icon-login"/>
-             <input ref={passwordRef} id="hs-toggle-password" type="password" className="password-input-login" placeholder="Password"/>
-              <button type="button" className="password-show-hide" id="toggle-password-btn">
-              <img src={off} className="eye-icon-login" alt="eye-off-2">
+             <input ref={passwordRef} id="hs-toggle-password" type={isPasswordVisible ? 'text' : 'password'}className="password-input-login" placeholder="Password"/>
+              <button type="button" className="password-show-hide" onClick={togglePasswordVisibility}>
+              <img src={isPasswordVisible ? on : off} className="eye-icon-login" alt="eye">
                 </img>
               </button>
           </div>
@@ -91,7 +94,7 @@ export default function login(){
             </form>
             </div>
             <div>
-            <button className="signin-button-bar" onClick={() => window.location.href = '/signup'}>
+            <button className="signin-button-bar" onClick={() => window.location.href = 'signupEmployee'}>
                 Sign in
             </button>
             </div>
@@ -102,7 +105,7 @@ export default function login(){
             </div>
             <div>
               <button >
-              <a className="forgot-password" href="forgotpass">Forgot password</a>
+              <Link className="forgot-password" to="/forgot">Forgot password</Link>
               </button>
             </div>
       </section>

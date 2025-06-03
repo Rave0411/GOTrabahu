@@ -6,11 +6,12 @@ import { useStateContext } from "../contexts/contextprovider";
 import { useNavigate } from 'react-router-dom';
 import logo from "../assets/images/header logo.jpg";
 import arrow from "../assets/images/Arrow.png";
-import Background from "../assets/images/background.png";
+import background from "../assets/images/background.png";
 import bodylogo from "../assets/images/Gologo.png";
 import email from "../assets/images/email picture.png";
 import passwordIcon from "../assets/images/password picture.png";
 import off from "../assets/images/eye-off.png";
+import on from "../assets/images/eye-on.png";
 
 export default function signupEmployer(){
     const [text, setText] = useState("");
@@ -27,6 +28,16 @@ export default function signupEmployer(){
     const [output, setOutput] = useState(null);
     const {setUser, setToken} = useStateContext();
     const navigate = useNavigate();
+
+    const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+    const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+       };
+
+    const [isPasswordVisible2, setIsPasswordVisible2] = useState(false);
+    const togglePasswordVisibility2 = () => {
+    setIsPasswordVisible2(!isPasswordVisible2);
+       };
 
     const Submit =  (ev) =>{
         ev.preventDefault();
@@ -48,7 +59,7 @@ export default function signupEmployer(){
             password: password,
         };
 
-          axiosClient.post("/signupEmployer",payload).then(({data})=>{
+          axiosClient.post("/employers/signupEmployer",payload).then(({data})=>{
           setUser(data.user);
           setToken(data.token);
         }).catch(err => {
@@ -60,75 +71,62 @@ export default function signupEmployer(){
     }
 
     return(
-          <div>
-      {/* Header Section */}
-      <section className="header-section-login_6">
-        <div className="top-shape-login_6"></div>
-        <div className="header-container-login_6">
-          <img src={logo} alt="header Logo" className="logo-signup_6" />
+           <div>
+                {/* Header Section */}
+                <section className="header-section-login_6">
+                  <div className="top-shape-login_6"></div>
+                  <div className="header-container-login_6">
+                    <img src={logo} alt="header Logo" className="logo-signup_6" />
+                    <img src={arrow} alt = "header-arrow_6"/>
+                  </div>
+                  <button>
+                    <Link className="back-button-signup_6" to="/"/>
+                  </button>
+                </section>
 
-          <img src={arrow} alt = "header-arrow_6"/>
-
-        </div>
-        <button>
-          <a className="back-button-signup_6" href="login"/>
-        </button>
-      </section>
-
-      {/* Body Section */}
-      <section className="container-login_6">
-         <p className="body-text_6"> Every great journey starts with a single login. </p>
-        <div className="body-background_6">
-          <img src={Background} alt="body background" className="background-signup_6" />
-        </div>
-        <div className="grey-fade-signup_6"></div>
-        <div className="top-rec-employee_6">
-          <text className="text-employee_6">Employer</text>
-        </div>
-         <div className="login-form_6" >
-          <img src={bodylogo} alt="body Logo" className="Gologo-login_6" />
-        </div>
-          <div className = "email-box_6">
-            <text className="top-text-email_6">Enter Email</text>
-            <text className="top-text-password_6">Create Password</text>
-            <input type="email" placeholder="Email" className="email-input-login_6"/>
-          </div>
-          <div>
-            <img src={email} alt="email" className="email-icon-login_6"/>
-          </div>
-          <div>
-
-
-              <img src={passwordIcon} alt="password" className="password-icon-login_6"/>
-             <input id="hs-toggle-password" type="password" className="password-input-login_6" placeholder="Password"/>
-              <button type="button" className="password-show-hide_6" id="toggle-password-btn">
-              <img src={off} className="eye-icon-employee_6" alt="eye-off">
-
-                </img>
-              </button>
-
-          </div>
-          <input type="password" className="confirm-password-input_6" id="confirmpassword" placeholder="Confirm Password"/>
-            <div>
-            <button type="button" className="password-show-hide2_6" id="toggle-password-btn">
-              <img src={off} className="eye-icon-employee_6" alt="eye-off"></img>
-                </button>
-            <button>
-             <a className="Create-button_6" href="employee_profile">
-              <text className="Create-account-text">Create Account</text>
-             </a>
-            </button>
-            </div>
-            <div className="login-text_6">
-                  <p>
-                    Already have an account? click <span> <button> <a className="login-text-portal" href="login">Log in</a> </button> </span> to proceed.
-                  </p>
-            </div>
-            <div>
-              <div className="Password-length_6">* Password must contain atleast 8 Characters</div>
-            </div>
-      </section>
-    </div>
+                {/* Body Section */}
+                <section className="container-login_6">
+                   <p className="body-text_6"> Every great journey starts with a single login. </p>
+                  <div className="body-background_6">
+                    <img src={background} alt="body background" className="background-signup_6" />
+                  </div>
+                  <div className="grey-fade-signup_6"></div>
+                  <div className="top-rec-employee_6">
+                    <span className="text-employee_6">Employer</span>
+                  </div>
+                   <div className="login-form_6" >
+                    <img src={bodylogo} alt="body Logo" className="Gologo-login_6" />
+                  </div>
+                  <div className = "email-box_6">
+                    <form onSubmit ={Submit}>
+                      <span className="top-text-email_6">Enter Email</span>
+                      <span className="top-text-password_6">Create Password</span>
+                      <input ref={emailRef} type="email" placeholder="Email" className="email-input-login_6"/>
+                        <img src={passwordIcon} alt="password" className="password-icon-login_6"/>
+                      <button type="submit" className="create-button_6">Create Account</button>
+                        <div>
+                        <input ref={passwordRef} id="hs-toggle-password" type={isPasswordVisible ? 'text' : 'password'} className="password-input-login_6" placeholder="Password"/>
+                        <button type="button" className="password-show-hide_6" onClick={togglePasswordVisibility}>
+                        <img src={isPasswordVisible ? on : off} className="eye-icon-employee_6" alt='eye'></img>
+                        </button>
+                        </div>
+                        <div>
+                        <input ref={confirmpasswordRef} id="hs-toggle-password" type={isPasswordVisible2 ? 'text' : 'password'} className="confirm-password-input_6" placeholder="Password"/>
+                        <button type="button" className="password-show-hide2_6" onClick={togglePasswordVisibility2}>
+                        <img src={isPasswordVisible2 ? on : off} className="eye-icon-employee_6" alt='eye'></img>
+                        </button>
+                        </div>
+                       <div>
+                      <img src={email} alt="email" className="email-icon-login_6"/>
+                    </div>
+                      </form>
+                      </div>
+                      <div className="login-text_6">
+                      <p>Already have an account? click <span> <button> <a className="login-text-portal" href="loginEmployer">Log in</a> </button> </span> to proceed.</p>
+                      </div>
+                        <div className="Password-length_6">Password must contain atleast 8 Characters</div>
+                  </section>
+              </div>
 
     );
 }

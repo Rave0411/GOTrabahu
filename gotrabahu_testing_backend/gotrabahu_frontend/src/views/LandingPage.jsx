@@ -1,33 +1,59 @@
 import React from "react";
-import { Navigate, Outlet } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 import { Link } from "react-router-dom";
 import logo from "../assets/images/Gologo.png";
 import iIcon from "../assets/images/abouticon.png";
-import arrowIcon from "../assets/images/Arrow.png";
+import arrowIcon from "../assets/images/arrow_1.png";
 import createIcon from "../assets/images/blackIcon.png";
 import joinIcon from "../assets/images/joinIcon.png";
 import findIcon from "../assets/images/magnifyingIcon.png";
 import applyIcon from "../assets/images/checkIcon.png";
 import fadebackground from "../assets/images/greenfade.png";
 import { useStateContext } from "../contexts/contextprovider.jsx";
+import { useState } from "react";
 
 
 export default function LandingPage() {
-    const {token} = useStateContext();
-    if(token){
-        return <Navigate to='/'/>
-    }
+
+    const [actionType, setActionType] = useState(null);
+    const navigate = useNavigate();
+    const scrollToCategories = () => {
+        const categoriesSection = document.getElementById("categories-section");
+        if (categoriesSection) {
+            categoriesSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+        const scrollToAbout = () => {
+        const aboutSection = document.getElementById("about-section");
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
     <div id="landingpage">
     <div className="header">
       <div className="header-container-landing">
-        <button>
-        <Link className="login-button-landing" to="/login">Login</Link>
-        <Link className="signup-button-landing" to="/signupEmployee">Signup</Link>
-        </button>
-        <div className="about-text-landing">About us</div>
+        <div>
+            <button onClick={
+                () => {
+                    setActionType("login");
+                    scrollToCategories();
+                }
+            } className="login-button-landing">Log In</button>
+            <button onClick={
+                () => {
+                    setActionType("signup");
+                    scrollToCategories();
+                }
+            } className="signup-button-landing">Sign Up</button>
+        </div>
+        <div>
+        <button onClick={scrollToAbout} className="about-button-landing">
+        <span className="about-link-text">About us</span>
         <div className="about-icon-landing">
-          <img src={iIcon} alt="I-icon" className="about-icon" />
+            <img src={iIcon} alt="I-icon" className="about-icon" />
+        </div>
+        </button>
         </div>
       </div>
 
@@ -44,7 +70,7 @@ export default function LandingPage() {
       <div className="apply-text">Apply</div>
 
       {/* About Section */}
-      <div className="about-background"></div>
+      <div id = "about-section" className="about-background"></div>
       <div className="magnifying">
         <div className="large-circular"></div>
         <div className="smaller-circular"></div>
@@ -71,7 +97,7 @@ export default function LandingPage() {
       </div>
 
       {/* Categories Section */}
-      <div className="categories-background">
+      <div id="categories-section" className="categories-background">
       <div className="categories-greenfade-background">
         <img src={fadebackground} alt="Fade Background" className="fade-background" />
       </div>
@@ -84,13 +110,21 @@ export default function LandingPage() {
             looking for talent like you.
       </div>
       <div className="employee-button-landingpage">
-        <button >
-          <Link className="employee-button-background" to="/signupEmployee">
-            <text className="employee-button-text">Register Now</text>
+        <button
+            onClick={() => {
+                if(actionType === 'login') {
+                    navigate('/loginEmployee');
+                } else if(actionType === 'signup') {
+                    navigate('/signupEmployee');
+                }
+            }}
+            >
+            <span className="employee-button-background" to="/signupEmployee">
+            <span className="employee-button-text">Register now</span>
             <div className="employee-arrow-button">
             <img src={arrowIcon} alt="Arrow Icon" className="arrow-employee" />
             </div>
-          </Link>
+            </span>
         </button>
       </div>
       <div className="employer-card"></div>
@@ -101,14 +135,20 @@ export default function LandingPage() {
       for your needs.
       </div>
       <div className="employer-buttons-landingpage">
-        <button>
-        <a className="employer-button-background" href="Signupemployer">
-          <text className="employer-button-text">Register Now</text>
+        <button
+        onClick={() => {
+            if(actionType === 'login') {
+                navigate('/loginEmployer');
+            } else if(actionType === 'signup') {
+                navigate('/signupEmployer');
+            }
+        }}>
+        <span className="employer-button-background" to="/signupEmployer">
+          <span className="employer-button-text">Register now</span>
           <div className="employer-arrow-button">
           <img src={arrowIcon} alt="Arrow Icon" className="arrow-employer" />
           </div>
-        </a>
-
+        </span>
         </button>
       </div>
       <div className="small-decorative"></div>
@@ -131,9 +171,6 @@ export default function LandingPage() {
         </div>
       </div>
     </div>
-
-
-
       {/* Footer Section */}
       <div className="footer-background">
         <div className="GoTrabahu-footer-text">GOTrabahu</div>
@@ -153,7 +190,7 @@ export default function LandingPage() {
         &copy; All rights reserved 2025. GOTrabahu
       </div>
     </div>
-        <Outlet/>
+        {/* Remove Outlet here if LandingPage is not a layout */}
     </div>
   );
 
